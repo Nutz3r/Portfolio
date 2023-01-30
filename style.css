@@ -48,7 +48,7 @@ nav{
     width: var(--button-width);
     height: 150px;
     border-radius: 30px;
-    background-color: #ffff00;
+    background-color: white;
     position: relative;
     z-index: 2;
     overflow-y: hidden;
@@ -154,6 +154,20 @@ nav h1{
 }
 
 
+.arrow{
+    width: 35px;
+    position: relative;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: blinker 2.2s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
 /***** PROFIL *****/
 
 #profil{
@@ -182,9 +196,9 @@ nav h1{
     width: 80%;
     height: 200vh;
     margin: 0 auto;
-
     position: relative;
     z-index: 2;
+    flex-direction: row-reverse;
 }
 
 .part3{
@@ -192,7 +206,6 @@ nav h1{
     width: 80%;
     height: 200vh;
     margin: 0 auto;
-
     position: relative;
     z-index: 3;
 }
@@ -206,6 +219,16 @@ nav h1{
     background: white;
     color: black;
   }
+
+  .texte{
+    width: 50%;
+    position: relative;
+    top: 20%;
+    margin-left: 30px;
+    text-align: justify;
+    font-size: 20px;
+}
+
 
 
 /***** COMPETENCES *****/
