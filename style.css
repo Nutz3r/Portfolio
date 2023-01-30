@@ -100,12 +100,18 @@ nav h1{
 /***** ACCUEIL *****/
 
 #accueil{
+    /* 
     top: 0;
     left: 0;
     z-index: 1;
-    width: 100%;
-    height: 100vh;
-    background-color: black;
+        Pour la suite */
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
 }
 
 #accueil h1{
@@ -144,24 +150,29 @@ nav h1{
 }
 
 .discover{
-    position: relative;
     width: fit-content;
-    top: 50%;
-    left: 10%;
-    transform: translateY(-50%);
+    height: fit-content;
     color: white;
-
+    margin-left: 10%;
 }
 
 
 .arrow{
     width: 35px;
-    position: relative;
-    bottom: 5%;
+    height: 35px;
+    animation: blinker 2.2s linear infinite;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    animation: blinker 2.2s linear infinite;
 }
+
+.arrow a{
+    width: 35px;
+}
+
+
 
 @keyframes blinker {
   50% {
