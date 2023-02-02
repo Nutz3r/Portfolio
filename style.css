@@ -243,3 +243,19 @@ nav h1{
     min-height: 100vh;
     background-color: #c0c0c0;
 }
+
+
+
+/***** 768px *****/
+
+
+@media all and (max-width: 768px){
+    
+
+    .choice{
+        display: flex;
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 10px
+    }
+}
