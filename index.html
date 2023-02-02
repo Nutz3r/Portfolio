@@ -68,11 +68,11 @@
             
         </div>
 
-        <div class="arrow">
-            <a href="#profil"><img src="images/icons/arrow-down.svg" alt=""></a>
+        <div id="arrow">
+            <a href="#profil"><img src="images/icons/arrow-down.svg" alt="arrow-down"></a>
         </div>
-        
     </div>
+
 
 <!-- ******************************************************** -->
 
@@ -84,6 +84,8 @@
                 <h1>Lorem Ipsum</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, repudiandae commodi obcaecati quas veritatis cum. Commodi nam aliquam neque itaque obcaecati magnam nesciunt distinctio reiciendis corporis, voluptatum cumque, ipsam ipsa earum molestiae repellat enim perferendis delectus atque numquam laudantium nisi asperiores voluptatibus iste! Temporibus, in? Architecto obcaecati volupetatum iusto deserunt in nisi omnis quae? Odit fugiat tempora a illo unde, nostrum maiores iusto. Praesentium, atque consequuntur voluptate veniam nesciunt, illo quis ut rem, id ducimus non. Itaque quas veniam maxime, corrupti praesentium libero doloribus enim placeat voluptatum labore, nam quia reprehenderit nobis eos voluptates assumenda sit esse, cum nesciunt voluptatem!</p>
             </div>
+
+            
         </div>
 
         <div class="right-content">
@@ -137,11 +139,23 @@
 
     //Accueil
 
+    
+    document.getElementById("arrow").addEventListener("click", function() {
+        accueil.classList.add("accueil-clicked");});
+        
+        var test =  document.getElementsByClassName("bouton-accueil")
+
+        for (let i = 0; i < test.length; i++) {
+                test[i].addEventListener("click", function() {
+        accueil.classList.add("accueil-clicked");});
+            }
+
+                // Ajouter au scroll //
 
 
-
-    // Scale on Scroll
-        window.addEventListener( 'load', function() {
+/*
+// Scale on Scroll
+    window.addEventListener( 'load', function() {
         var box = document.getElementById('box'),
             docHeight = document.documentElement.offsetHeight;
   
@@ -157,6 +171,7 @@
         }, false);
   
         }, false);
+    */
     </script>
 
     
