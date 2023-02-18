@@ -92,20 +92,11 @@ nav h1{
 #accueil{
     height: 100vh;
     width: 100%;
-    position: absolute;
-    z-index: 2;
     display: flex;
     background-color: black;
     border-bottom: 2px solid white;
     flex-direction: column;
     justify-content: center;
-    transition: 1.5s;
-}
-
-.accueil-clicked{
-    transform: translateY(-100%);
-        transition: 1.5s;
-    animation-delay: 0.5s;
 }
 
 #accueil h1{

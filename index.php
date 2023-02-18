@@ -1,3 +1,6 @@
+<?php
+    require "connexion.php";
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Antoine Lespagnard - Portfolio</title>
 </head>
 <body> 
     
@@ -133,13 +136,10 @@
 
 
 
-
-
 <script>
 
     //Accueil
 
-    
     document.getElementById("arrow").addEventListener("click", function() {
         accueil.classList.add("accueil-clicked");});
         
@@ -149,29 +149,7 @@
                 test[i].addEventListener("click", function() {
         accueil.classList.add("accueil-clicked");});
             }
-
-                // Ajouter au scroll //
-
-
-/*
-// Scale on Scroll
-    window.addEventListener( 'load', function() {
-        var box = document.getElementById('box'),
-            docHeight = document.documentElement.offsetHeight;
-  
-        window.addEventListener( 'scroll', function() {
-            var scrolled = window.scrollY / ( docHeight - window.innerHeight ),
-            transformValue = 'scale('+scrolled+')';
-    
-        box.style.WebkitTransform = transformValue;
-        box.style.MozTransform = transformValue;
-        box.style.OTransform = transformValue;
-        box.style.transform = transformValue;
-    
-        }, false);
-  
-        }, false);
-    */
+            
     </script>
 
     
