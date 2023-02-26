@@ -10,7 +10,7 @@
     if(isset($_GET['delete']))
     {
         $id = htmlspecialchars($_GET['delete']);
-        $verif = $bdd->prepare("SELECT * FROM products WHERE id=?");
+        $verif = $bdd->prepare("SELECT * FROM galerie WHERE id=?");
         $verif->execute([$id]);
         if(!$donVerif = $verif->fetch() )
         {
@@ -23,7 +23,7 @@
         unlink("../images/".$donVerif['cover']);
 
         // supprimer le produit
-        $delete = $bdd->prepare("DELETE FROM products WHERE id=?");
+        $delete = $bdd->prepare("DELETE FROM galerie WHERE id=?");
         $delete->execute([$id]);
         $delete->closeCursor();
         header("LOCATION:products.php?successDelete=".$id);
@@ -77,7 +77,7 @@
             </thead>
             <tbody>
                 <?php
-                    $req = $bdd->query("SELECT * FROM products");
+                    $req = $bdd->query("SELECT * FROM galerie");
                     while($don = $req->fetch())
                     {
                         echo "<tr>";
