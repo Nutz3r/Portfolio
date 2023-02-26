@@ -90,11 +90,9 @@ nav h1{
 /***** ACCUEIL *****/
 
 #accueil{
-    height: 100vh;
     width: 100%;
     display: flex;
     background-color: black;
-    border-bottom: 2px solid white;
     flex-direction: column;
     justify-content: center;
 }
@@ -135,15 +133,22 @@ nav h1{
     width: fit-content;
     color: white;
     margin-left: 10%;
+    position: sticky;
+    top: 50%;
+    z-index: 3;
+    transform: translateY(-50%);
 }
+
+/* 
 
 #arrow{
     width: 35px;
     animation: blinker 2.2s linear infinite;
-    position: absolute;
+    position: sticky;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 10;
 }
 
 @keyframes blinker {
@@ -151,6 +156,63 @@ nav h1{
     opacity: 0;
   }
 }
+
+*/
+
+
+/*** ***/
+.section{
+    min-height: 100vh;
+    position: relative;
+    z-index: 2;
+}
+
+.image-container{
+    position: relative;
+}
+
+.image{
+    height: 100vh;
+    position: fixed;
+    width: 50%;
+    top: 0;
+    right: 7%;
+    background-size: contain;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    mix-blend-mode: multiply;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.section.active .image{
+    opacity: 1;
+}
+
+.metier{
+    color: white;
+    font-size: 12px;
+    font-family: 'Aboreto', cursive;
+    font-weight: 800;
+}
+/*** ***/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /***** PROFIL *****/
 
 #profil{

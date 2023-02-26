@@ -62,18 +62,77 @@
 
         <div class="discover">
 
-            <h1 id="hello">Lorem Ipsum</h1>
+            <h1 id="hello">Looking for...</h1>
 
             <div class="choice">
-                <a class="bouton-accueil" href="#contact">Me contacter</a>
-                <a class="bouton-accueil" href="#profil">Qui suis-je?</a>
+                <a class="bouton-accueil" href="#contact">Contact me</a>
+                <a class="bouton-accueil" href="#profil">Who am I?</a>
             </div> 
             
         </div>
 
+<!-- 
+            
         <div id="arrow">
             <a href="#profil"><img src="images/icons/arrow-down.svg" alt="arrow-down"></a>
         </div>
+
+-->
+
+    
+        <div class="section">
+            <div class="image-container">
+                <div class="image" style="background-image: url(images/scroll/1.png);"></div>
+            </div>
+        </div>
+
+
+        <div class="section">
+            <div class="image-container">
+                <div class="image" style="background-image: url(images/scroll/2.png);"></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="image-container">
+                <div class="image" style="background-image: url(images/scroll/3.png);"></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="image-container">
+                <div class="image" style="background-image: url(images/scroll/4.png);"></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="image-container">
+                <div class="image" style="background-image: url(images/scroll/5.png);"></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="image-container">
+                <div class="image" style="background-image: url(images/scroll/6.png);"></div>
+            </div>
+        </div>
+
+    
+    <script>
+        window.onscroll = function() { changeImage() }
+    
+        function changeImage() {
+          var scroll = window.scrollY + (window.innerHeight/1);
+    
+          [...document.getElementsByClassName('section')].forEach(el => {
+            el.classList.remove('active');
+    
+            if(el.offsetTop <= scroll && el.offsetTop + el.offsetHeight > scroll) {
+              el.classList.add('active');
+            }
+          })
+        } changeImage();
+      </script>
     </div>
 
 
