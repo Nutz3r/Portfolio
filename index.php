@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Antoine Lespagnard - Portfolio</title>
 </head>
 <body> 
@@ -118,21 +119,7 @@
         </div>
 
     
-    <script>
-        window.onscroll = function() { changeImage() }
-    
-        function changeImage() {
-          var scroll = window.scrollY + (window.innerHeight/1);
-    
-          [...document.getElementsByClassName('section')].forEach(el => {
-            el.classList.remove('active');
-    
-            if(el.offsetTop <= scroll && el.offsetTop + el.offsetHeight > scroll) {
-              el.classList.add('active');
-            }
-          })
-        } changeImage();
-      </script>
+
     </div>
 
 
@@ -193,23 +180,6 @@
 
 <!-- ******************************************************** -->
 
-
-
-<script>
-
-    //Accueil
-
-    document.getElementById("arrow").addEventListener("click", function() {
-        accueil.classList.add("accueil-clicked");});
-        
-        var test =  document.getElementsByClassName("bouton-accueil")
-
-        for (let i = 0; i < test.length; i++) {
-                test[i].addEventListener("click", function() {
-        accueil.classList.add("accueil-clicked");});
-            }
-            
-    </script>
 
     
 </body>
