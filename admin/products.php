@@ -38,7 +38,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <title>Administration de Stock</title>
+    <title>Administration - Portfolio</title>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
@@ -70,9 +70,10 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>id</th>
-                    <th>Title</th>
-                    <th class="text-center">Action</th>
+                    <th>ID</th>
+                    <th>Titre</th>
+                    <th>Categorie</th>
+                    <th class="text-center">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -82,7 +83,8 @@
                     {
                         echo "<tr>";
                             echo "<td>".$don['id']."</td>";
-                            echo "<td>".$don['title']."</td>";
+                            echo "<td>".$don['nom']."</td>";
+                            echo "<td>".$don['categorie']."</td>";
                             echo "<td class='text-center'>";
                                 echo "<a href='updateProduct.php?id=".$don['id']."' class='btn btn-warning m-2'>Modifier</a>";
                                 echo "<a href='products.php?delete=".$don['id']."' class='btn btn-danger m-2'>Supprimer</a>";

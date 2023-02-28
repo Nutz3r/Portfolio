@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <title>Administration de Stock</title>
+    <title>Administration - Portfolio</title>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
@@ -28,8 +28,12 @@
         <h2>Ajouter un produit</h2>
         <form action="treatmentAddProduct.php" method="POST" enctype="multipart/form-data">
             <div class="form-group my-3">
-                <label for="title">Titre: </label>
-                <input type="text" id="title" name="title" class="form-control">
+                <label for="nom">Titre: </label>
+                <input type="text" id="nom" name="nom" class="form-control">
+            </div>
+            <div class="form-group my-3">
+                <label for="categorie">Catégorie: </label>
+                <input type="text" id="categorie" name="categorie" class="form-control">
             </div>
             <div class="form-group my-3">
                 <label for="date">Date: </label>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : dim. 26 fév. 2023 à 01:56
+-- Généré le : mar. 28 fév. 2023 à 17:55
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -30,11 +30,20 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `galerie`;
 CREATE TABLE IF NOT EXISTS `galerie` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `categorie` varchar(255) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `description` text NOT NULL,
+  `date` date NOT NULL,
   `image` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `galerie`
+--
+
+INSERT INTO `galerie` (`id`, `categorie`, `nom`, `description`, `date`, `image`) VALUES
+(5, 'illu', 'test', 'description', '1999-04-06', 'image.jpg');
 
 -- --------------------------------------------------------
 
@@ -56,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `identifiants` (
 --
 
 INSERT INTO `identifiants` (`id`, `login`, `password`, `email`) VALUES
-(1, 'admin', 'admin', 'admin@epse.be');
+(1, 'admin', '$2y$10$AyMVw6AcOyn8ifq/rS5XQuEauzTOmBtVEDLTSospCfatsMOs9Nq8S', 'admin@epse.be');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

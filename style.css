@@ -167,6 +167,10 @@ nav h1{
     z-index: 2;
 }
 
+.last{
+    min-height: 150vh!important;
+}
+
 .image-container{
     position: relative;
 }
@@ -208,6 +212,7 @@ nav h1{
     width: 100%;
     background-color: black;
 }
+
 #profil{
     background-color: black;
     color: white;

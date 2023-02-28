@@ -16,7 +16,7 @@
 
     // vérifier si l'id est dans la bdd
     require "../connexion.php";
-    $req = $bdd->prepare("SELECT * FROM products WHERE id=?");
+    $req = $bdd->prepare("SELECT * FROM galerie WHERE id=?");
     $req->execute([$id]);
     if(!$don = $req->fetch())
     {
@@ -33,7 +33,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <title>Administration de Stock</title>
+    <title>Administration - Portfolio</title>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
@@ -47,8 +47,12 @@
         <h2>Modifier un produit</h2>
         <form action="treatmentUpdateProduct.php?id=<?= $id ?>" method="POST" enctype="multipart/form-data">
             <div class="form-group my-3">
-                <label for="title">Titre: </label>
-                <input type="text" id="title" name="title" value="<?= $don['title'] ?>" class="form-control">
+                <label for="nom">Titre: </label>
+                <input type="text" id="nom" name="nom" value="<?= $don['nom'] ?>" class="form-control">
+            </div>
+            <div class="form-group my-3">
+                <label for="categorie">Catégorie: </label>
+                <input type="text" id="categorie" name="categorie" value="<?= $don['categorie'] ?>" class="form-control">
             </div>
             <div class="form-group my-3">
                 <label for="date">Date: </label>
@@ -61,7 +65,7 @@
             <div class="form-group-my-3">
                 <div class="row">
                     <div class="col-4">
-                        <img src="../images/<?= $don['cover'] ?>" alt="image du produit <?= $don['title'] ?>" class="img-fluid">
+                        <img src="../images/portfolio/<?= $don['image'] ?>" alt="image du produit <?= $don['nom'] ?>" class="img-fluid">
                     </div>
                 </div>
                 <label for="image">Modifier l'image de couverture</label>

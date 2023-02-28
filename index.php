@@ -112,7 +112,7 @@
             </div>
         </div>
 
-        <div class="section">
+        <div class="section last">
             <div class="image-container">
                 <div class="image" style="background-image: url(images/scroll/6.png);"></div>
             </div>

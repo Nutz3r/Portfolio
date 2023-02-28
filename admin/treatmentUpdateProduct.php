@@ -15,7 +15,7 @@
  
      // vérifier si l'id est dans la bdd
      require "../connexion.php";
-     $req = $bdd->prepare("SELECT * FROM products WHERE id=?");
+     $req = $bdd->prepare("SELECT * FROM galerie WHERE id=?");
      $req->execute([$id]);
      if(!$don = $req->fetch())
      {
@@ -25,16 +25,20 @@
      $req->closeCursor();
 
     // s'il vient de mon form ou non
-    if(isset($_POST['title']))
+    if(isset($_POST['nom']))
     {
         // vérif du contenu du formulaire et gestion error
         // init d'une variable $err à 0 
         $err = 0;
-        if(empty($_POST['title']))
+        $categorie = $_POST['categorie'];
+        $nom = $_POST['nom'];
+        $date = $_POST['date'];
+        $description = $_POST['description'];
+        if(empty($_POST['nom']))
         {
             $err = 1;
         }else{
-            $title = htmlspecialchars($_POST['title']);
+            $title = htmlspecialchars($_POST['nom']);
         }
 
         if(empty($_POST['date']))
@@ -58,18 +62,19 @@
             {
                 // pas d'image, donc modif sans fichier
                 require "../connexion.php";
-                $update = $bdd->prepare("UPDATE products SET title=:titre, date=:date, description=:description WHERE id=:myid");
+                $update = $bdd->prepare("UPDATE galerie SET nom=:titre, date=:date, description=:description, categorie=:categorie WHERE id=:myid ");
                 $update->execute([
-                    ":titre" => $title, 
+                    ":titre" => $nom, 
                     ":date" => $date, 
                     ":description" => $description, 
+                    ":categorie" => $categorie,
                     ":myid" => $id
                 ]);
                 $update->closeCursor();
                 header("LOCATION:products.php");
             }else{
                 // traitement de l'image pour la modification
-                $dossier = "../images/"; // ../images/monfichier.jpg
+                $dossier = "../images/portfolio/"; // ../images/monfichier.jpg
                 $fichier = basename($_FILES['image']['name']);
                 $taille_maxi = 2000000;
                 $taille = filesize($_FILES['image']['tmp_name']);
@@ -97,14 +102,15 @@
                     if(move_uploaded_file($_FILES['image']['tmp_name'], $dossier.$fichiercptl))
                     {
                         // supprimer le fichier de base
-                        unlink("../images/".$don['cover']);
+                        unlink("../images/portfolio/".$don['image']);
                         require "../connexion.php";
-                        $update = $bdd->prepare("UPDATE products SET title=:titre, date=:date, description=:description, cover=:image WHERE id=:myid");
+                        $update = $bdd->prepare("UPDATE galerie SET nom=:titre, date=:date, description=:description, image=:image, categorie=:categorie WHERE id=:myid");
                         $update->execute([
-                            ":titre" => $title, 
+                            ":titre" => $nom, 
                             ":date" => $date, 
                             ":description" => $description, 
                             ":image"=>$fichiercptl,
+                            ":categorie"=> $categorie,
                             ":myid" => $id
                         ]);
                         $update->closeCursor();
