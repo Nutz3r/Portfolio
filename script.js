@@ -1,3 +1,5 @@
+/*********** ACCUEIL ***********/
+
 window.onscroll = function() { changeImage() }
 
 function changeImage() {
@@ -13,10 +15,7 @@ function changeImage() {
 } changeImage();
 
 
-
-/*********** ACCUEIL ***********/
-
-
+/*
 document.getElementById("arrow").addEventListener("click", function() {
     accueil.classList.add("accueil-clicked");});
     
@@ -26,3 +25,4 @@ document.getElementById("arrow").addEventListener("click", function() {
             test[i].addEventListener("click", function() {
     accueil.classList.add("accueil-clicked");});
         }
+*/

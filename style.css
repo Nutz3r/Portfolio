@@ -202,21 +202,14 @@ nav h1{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 /***** PROFIL *****/
-
+.tempo{
+    height: 50vh;
+    width: 100%;
+    background-color: black;
+}
 #profil{
-    background-color: #011640;
+    background-color: black;
     color: white;
 }
 
