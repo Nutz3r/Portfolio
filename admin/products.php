@@ -20,7 +20,7 @@
         $verif->closeCursor();
         
         // supprimer l'image du produit
-        unlink("../images/".$donVerif['cover']);
+        unlink("../images/".$donVerif['cover']); // ????????????????? POUR DEL L'IMAGE? ???????????????????????????????????
 
         // supprimer le produit
         $delete = $bdd->prepare("DELETE FROM galerie WHERE id=?");
@@ -73,6 +73,8 @@
                     <th>ID</th>
                     <th>Titre</th>
                     <th>Categorie</th>
+                    <th>Date</th>
+
                     <th class="text-center">Actions</th>
                 </tr>
             </thead>
@@ -85,6 +87,7 @@
                             echo "<td>".$don['id']."</td>";
                             echo "<td>".$don['nom']."</td>";
                             echo "<td>".$don['categorie']."</td>";
+                            echo "<td>".$don['date']."</td>";
                             echo "<td class='text-center'>";
                                 echo "<a href='updateProduct.php?id=".$don['id']."' class='btn btn-warning m-2'>Modifier</a>";
                                 echo "<a href='products.php?delete=".$don['id']."' class='btn btn-danger m-2'>Supprimer</a>";

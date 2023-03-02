@@ -55,29 +55,35 @@
 </head>
 <body>
     <div class="container">
-        
-        <h1 id="titre">Administration du Portfolio</h1>
-        <?php
-        if(isset($error))
-        {
-            echo "<div class='alert alert-danger'>".$error."</div>";
-        }
-        ?>
-        <form class="log-form action="index.php" method="POST">
-            <div class="form-group">
-                <label for="login">Login: </label>
-                <input type="text" id="login" name="login" class="textzone">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1>Administration du Portfolio</h1>
+                <?php
+                if(isset($error))
+                {
+                    echo "<div class='alert alert-danger'>".$error."</div>";
+                }
+                ?>
+                <form action="index.php" method="POST">
+                    <div class="form-group my-3">
+                        <label for="login">Login: </label>
+                        <input type="text" id="login" name="login" class="form-control">
+                    </div>
+                    <div class="form-group my-3">
+                        <label for="password">Mot de passe: </label>
+                        <input type="password" name="password" id="password" class="form-control">
+                    </div>
+                    <div class="form-group my-3">
+                        <input type="submit" value="Connexion" class="btn btn-primary">
+                        <a href="../index.php" class="btn btn-secondary mx-1">Retour au site</a>
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="password">Mot de passe: </label>
-                <input type="password" name="password" id="password" class="textzone">
-            </div>
-            <div class="buttons">
-                <a href="../index.php" class="back-btn">Retour au site</a>
-                <input type="submit" value="Connexion" class="log-btn">
+        </div>
 
-            </div>
-        </form>
+
+       
+       
     </div>
 </body>
 </html>
