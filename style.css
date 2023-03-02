@@ -87,6 +87,14 @@ nav h1{
     top: 50%;
 }
 
+.back-top{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 5%;
+    right: 26px;
+}
+
 /***** ACCUEIL *****/
 
 #accueil{
@@ -122,7 +130,6 @@ nav h1{
     border: 1px solid white;
 }
 
-
 .choice{
     display: flex;
     gap: 10%;
@@ -139,28 +146,6 @@ nav h1{
     transform: translateY(-50%);
 }
 
-/* 
-
-#arrow{
-    width: 35px;
-    animation: blinker 2.2s linear infinite;
-    position: sticky;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-}
-
-@keyframes blinker {
-  50% {
-    opacity: 0;
-  }
-}
-
-*/
-
-
-/*** ***/
 .section{
     min-height: 100vh;
     position: relative;
@@ -175,10 +160,10 @@ nav h1{
     position: relative;
 }
 
-.image{
+.moi{
     height: 100vh;
     position: fixed;
-    width: 50%;
+    width: 100%;
     top: 0;
     right: 7%;
     background-size: contain;
@@ -189,7 +174,7 @@ nav h1{
     transition: opacity 0.3s;
 }
 
-.section.active .image{
+.section.active .moi{
     opacity: 1;
 }
 
@@ -199,11 +184,6 @@ nav h1{
     font-family: 'Aboreto', cursive;
     font-weight: 800;
 }
-/*** ***/
-
-
-
-
 
 
 /***** PROFIL *****/
@@ -296,6 +276,27 @@ nav h1{
 }
 
 
+/***** 1350px *****/
+
+
+@media all and (max-width: 1300px){
+    
+
+    #accueil h1{
+        font-size: 55px;
+    }
+}
+
+
+/***** 1200px *****/
+
+
+@media all and (max-width: 1200px){
+    
+}
+
+
+
 
 /***** 768px *****/
 
@@ -303,10 +304,73 @@ nav h1{
 @media all and (max-width: 768px){
     
 
+
+
+
+    .moi{
+        right: 0;
+        background-position-x: center;
+        background-position-y: center;
+    }
+
     .choice{
         display: flex;
         margin-top: 20px;
+        gap: 10px;
         flex-direction: column;
-        gap: 10px
     }
+
+        /* Profil */
+    .tempo{
+        display: none;
+    }
+
+
 }
+
+
+/***** 450px *****/
+
+
+@media all and (max-width: 450px){
+ 
+    .moi{
+        background-size: 165%;
+    }
+
+    #accueil h1{
+        font-size: 47px;
+    }
+
+    .discover{
+        top: 70%;
+    }
+
+    .choice{
+        gap: 25px;
+    }
+
+    .bouton-accueil{
+        font-size: 15px;
+    }
+
+    
+}
+
+
+/***** 375px *****/
+
+
+@media all and (max-width: 375px){
+
+    .moi{
+        background-size: 140%;
+    }
+
+    #accueil h1{
+        font-size: 43px;
+    }
+
+}
+
+
