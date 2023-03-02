@@ -15,14 +15,7 @@ function changeImage() {
 } changeImage();
 
 
-/*
-document.getElementById("arrow").addEventListener("click", function() {
-    accueil.classList.add("accueil-clicked");});
-    
-    var test =  document.getElementsByClassName("bouton-accueil")
+/*********** BURGER MENU ***********/
 
-    for (let i = 0; i < test.length; i++) {
-            test[i].addEventListener("click", function() {
-    accueil.classList.add("accueil-clicked");});
-        }
-*/
+
+    /***********  ***********/

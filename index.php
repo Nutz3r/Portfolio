@@ -58,9 +58,10 @@
 
 
 
-        <a class="back-top" href="../Portfolio"><img src="images/icons/back-to-top.svg" alt=""></a>
+        <a class="back-top" href="#accueil"><img src="images/icons/back-to-top.svg" alt=""></a>
 
-  </nav>
+    </nav>
+
 
 <!-- ******************************************************** -->
 

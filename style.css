@@ -10,6 +10,13 @@ html{
 }
 
 /***** MENU *****/
+header{
+    display: none;
+}
+
+.nav{
+    display: none;
+}
 
 nav{
     height: 100vh;
@@ -296,16 +303,20 @@ nav h1{
 }
 
 
+/***** 1024px *****/
+
+@media all and (max-width: 1024px){
+    nav{
+        display: none;
+    }
+
+    /***** BURGER MENU *****/
+}
+
 
 
 /***** 768px *****/
-
-
 @media all and (max-width: 768px){
-    
-
-
-
 
     .moi{
         right: 0;
@@ -354,7 +365,6 @@ nav h1{
         font-size: 15px;
     }
 
-    
 }
 
 
@@ -372,5 +382,3 @@ nav h1{
     }
 
 }
-
-

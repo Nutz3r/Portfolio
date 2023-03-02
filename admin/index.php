@@ -54,9 +54,11 @@
     <title>Administration - Portfolio</title>
 </head>
 <body>
+    
+
     <div class="container">
+    <h1 id="titre">Administration du Portfolio</h1>
         
-        <h1 id="titre">Administration du Portfolio</h1>
         <?php
         if(isset($error))
         {
