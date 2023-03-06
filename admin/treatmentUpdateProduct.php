@@ -61,7 +61,6 @@
             if(empty($_FILES['image']['tmp_name']))
             {
                 // pas d'image, donc modif sans fichier
-                require "../connexion.php";
                 $update = $bdd->prepare("UPDATE galerie SET nom=:titre, date=:date, description=:description, categorie=:categorie WHERE id=:myid ");
                 $update->execute([
                     ":titre" => $nom, 
@@ -103,6 +102,8 @@
                     {
                         // supprimer le fichier de base
                         unlink("../images/portfolio/".$don['image']);
+                        // ne pas oublier la miniature
+                        unlink("../images/portfolio/mini_".$don['image']);
                         $update = $bdd->prepare("UPDATE galerie SET nom=:titre, date=:date, description=:description, image=:image, categorie=:categorie WHERE id=:myid");
                         $update->execute([
                             ":titre" => $nom, 
@@ -113,7 +114,14 @@
                             ":myid" => $id
                         ]);
                         $update->closeCursor();
-                        header("LOCATION:products.php?updatesuccess=".$id);
+
+                        // tester l'extension pour envoyer vers le bon fichier de redim et envoyer que c'est une modification avec l'id du produit à modif
+                        if($extension==".png")
+                        {
+                            header("LOCATION:redimpng.php?update=".$id."&image=".$fichiercptl);
+                        }else{
+                            header("LOCATION:redim.php?update=".$id."&image=".$fichiercptl);
+                        }
                     }else{
                         header("LOCATION:updateProduct.php?id=".$id."&errorimg=3");
                     }             

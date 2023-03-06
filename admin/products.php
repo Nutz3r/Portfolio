@@ -21,6 +21,8 @@
         
         // supprimer l'image du produit
         unlink("../images/portfolio/".$donVerif['image']);
+        unlink("../images/portfolio/mini_".$donVerif['image']);
+
 
         // supprimer le produit
         $delete = $bdd->prepare("DELETE FROM galerie WHERE id=?");
