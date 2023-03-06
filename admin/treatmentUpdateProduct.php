@@ -103,7 +103,6 @@
                     {
                         // supprimer le fichier de base
                         unlink("../images/portfolio/".$don['image']);
-                        require "../connexion.php";
                         $update = $bdd->prepare("UPDATE galerie SET nom=:titre, date=:date, description=:description, image=:image, categorie=:categorie WHERE id=:myid");
                         $update->execute([
                             ":titre" => $nom, 
