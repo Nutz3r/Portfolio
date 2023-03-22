@@ -69,6 +69,8 @@ if (isset($_POST['nom'])) {
                 $insert = $bdd->prepare("INSERT INTO galerie(nom,description,date,image,categorie) VALUES(?,?,?,?,?)");
                 $insert->execute([$nom, $description, $date, $fichiercptl,$categorie]);
                 $insert->closeCursor();
+                
+                
                 if($extension==".png")
                 {
                     header("LOCATION:redimpng.php?image=".$fichiercptl);
@@ -88,3 +90,5 @@ if (isset($_POST['nom'])) {
     header("LOCATION:products.php");
     // echo ("Test");
 }
+
+?>
