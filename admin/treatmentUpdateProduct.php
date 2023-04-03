@@ -49,7 +49,6 @@ if (isset($_POST['nom'])) {
             $update = $bdd->prepare("UPDATE galerie SET nom=:titre, description=:description, categorie=:categorie WHERE id=:myid ");
             $update->execute([
                 ":titre" => $nom,
-                ":date" => $date,
                 ":description" => $description,
                 ":categorie" => $categorie,
                 ":myid" => $id,
@@ -88,10 +87,9 @@ if (isset($_POST['nom'])) {
                     unlink("../images/portfolio/" . $don['image']);
                     // ne pas oublier la miniature
                     unlink("../images/portfolio/mini_" . $don['image']);
-                    $update = $bdd->prepare("UPDATE galerie SET nom=:titre, date=:date, description=:description, image=:image, categorie=:categorie WHERE id=:myid");
+                    $update = $bdd->prepare("UPDATE galerie SET nom=:titre, description=:description, image=:image, categorie=:categorie WHERE id=:myid");
                     $update->execute([
                         ":titre" => $nom,
-                        ":date" => $date,
                         ":description" => $description,
                         ":image" => $fichiercptl,
                         ":categorie" => $categorie,
