@@ -11,7 +11,6 @@ if (isset($_POST['nom'])) {
     $err = 0;
     $categorie = $_POST['id_categorie'];
     $nom = $_POST['nom'];
-    $date = $_POST['date'];
     $description = $_POST['description'];
 
     if (empty($_POST['nom'])) {
@@ -20,21 +19,15 @@ if (isset($_POST['nom'])) {
         $title = htmlspecialchars($_POST['nom']);
     }
 
-    if (empty($_POST['date'])) {
-        $err = 2;
-    } else {
-        $date = htmlspecialchars($_POST['date']);
-    }
-
     if (empty($_POST['description'])) {
-        $err = 3;
+        $err = 2;
     } else {
         $description = htmlspecialchars($_POST['description']);
     }
-    if (empty($_POST['id_categorie'])) {
-        $err = 4;
+    if (empty($_POST['categorie'])) {
+        $err = 3;
     } else {
-        $categorie = htmlspecialchars($_POST['id_categorie']);
+        $categorie = htmlspecialchars($_POST['categorie']);
     }
 
     //vérif si err sinon traitement
@@ -66,8 +59,8 @@ if (isset($_POST['nom'])) {
 
             if (move_uploaded_file($_FILES['image']['tmp_name'], $dossier . $fichiercptl)) {
                 require "../connexion.php";
-                $insert = $bdd->prepare("INSERT INTO galerie(nom,description,date,image,id_categorie) VALUES(?,?,?,?,?)");
-                $insert->execute([$nom, $description, $date, $fichiercptl,$categorie]);
+                $insert = $bdd->prepare("INSERT INTO galerie(nom,description,image,id_categorie) VALUES(?,?,?,?)");
+                $insert->execute([$nom, $description, $fichiercptl,$categorie]);
                 $insert->closeCursor();
                 
                 
@@ -88,7 +81,6 @@ if (isset($_POST['nom'])) {
     }
 } else {
     header("LOCATION:products.php");
-    // echo ("Test");
 }
 
 ?>

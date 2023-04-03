@@ -44,19 +44,29 @@
         <div>
             <a href="products.php" class="btn btn-secondary">Retour</a>
         </div>
-        <h2>Modifier un produit</h2>
+        <h2>Modifier un travail</h2>
         <form action="treatmentUpdateProduct.php?id=<?= $id ?>" method="POST" enctype="multipart/form-data">
             <div class="form-group my-3">
                 <label for="nom">Titre: </label>
                 <input type="text" id="nom" name="nom" value="<?= $don['nom'] ?>" class="form-control">
             </div>
             <div class="form-group my-3">
-                <label for="categorie">Catégorie: </label>
-                <input type="text" id="categorie" name="categorie" value="<?= $don['categorie'] ?>" class="form-control">
-            </div>
-            <div class="form-group my-3">
-                <label for="date">Date: </label>
-                <input type="date" id="date" name="date" value="<?= $don['date'] ?>" class="form-control">
+                    <label for="categorie">Categorie: </label>
+                    <select name="categorie" id="categorie" class="form-control">
+                        <?php 
+                            $cat = $bdd->query("SELECT * FROM categories");
+                            while($donCat = $cat->fetch())
+                            {
+                                if($donCat['id'] == $don['id_categorie'])
+                                {
+                                    echo "<option value='".$donCat['id']."' selected>".$donCat['nom']."</option>";
+                                }else{
+                                    echo "<option value='".$donCat['id']."'>".$donCat['nom']."</option>";
+                                }
+                            }
+                            $cat->closeCursor();
+                        ?>
+                    </select>
             </div>
             <div class="form-group my-3">
                 <label for="description">Description: </label>
@@ -68,7 +78,7 @@
                         <img src="../images/portfolio/<?= $don['image'] ?>" alt="image du produit <?= $don['nom'] ?>" class="img-fluid">
                     </div>
                 </div>
-                <label for="image">Modifier l'image de couverture</label>
+                <label for="image">Modifier l'image</label>
                 <input type="file"  id="image" name="image" class="form-control">
             </div>
             <div class="form-group">

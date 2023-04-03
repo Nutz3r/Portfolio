@@ -75,7 +75,6 @@
                     <th>ID</th>
                     <th>Titre</th>
                     <th>Categorie</th>
-                    <th>Date</th>
 
                     <th class="text-center">Actions</th>
                 </tr>
@@ -89,7 +88,6 @@
                             echo "<td>".$don['id']."</td>";
                             echo "<td>".$don['nom']."</td>";
                             echo "<td>".$don['id_categorie']."</td>";
-                            echo "<td>".$don['date']."</td>";
                             echo "<td class='text-center'>";
                                 echo "<a href='updateProduct.php?id=".$don['id']."' class='btn btn-warning m-2'>Modifier</a>";
                                 echo "<a href='products.php?delete=".$don['id']."' class='btn btn-danger m-2'>Supprimer</a>";
