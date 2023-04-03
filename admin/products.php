@@ -81,16 +81,19 @@
             </thead>
             <tbody>
                 <?php
-                    $req = $bdd->query("SELECT * FROM galerie");
+                    $req = $bdd->prepare("SELECT galerie.id as gid, galerie.nom as gnom, categories.nom as cnom FROM galerie INNER JOIN categories ON galerie.id_categorie = categories.id LIMIT :offset, :mylimit");
+                    $req->bindParam(':offset',$offset, PDO::PARAM_INT);
+                    $req->bindParam(':mylimit',$limit, PDO::PARAM_INT);
+                    $req->execute();
                     while($don = $req->fetch())
                     {
                         echo "<tr>";
-                            echo "<td>".$don['id']."</td>";
-                            echo "<td>".$don['nom']."</td>";
-                            echo "<td>".$don['id_categorie']."</td>";
+                            echo "<td>".$don['gid']."</td>";
+                            echo "<td>".$don['gnom']."</td>";
+                            echo "<td>".$don['cnom']."</td>";
                             echo "<td class='text-center'>";
-                                echo "<a href='updateProduct.php?id=".$don['id']."' class='btn btn-warning m-2'>Modifier</a>";
-                                echo "<a href='products.php?delete=".$don['id']."' class='btn btn-danger m-2'>Supprimer</a>";
+                                echo "<a href='updateProduct.php?id=".$don['gid']."' class='btn btn-warning m-2'>Modifier</a>";
+                                echo "<a href='products.php?delete=".$don['gid']."' class='btn btn-danger m-2'>Supprimer</a>";
                             echo "</td>";
                         echo "</tr>";
                     }

@@ -37,6 +37,10 @@
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+    <?php 
+        include("partials/header.php");
+    ?>
+
     <div class="container">
 
 
@@ -51,22 +55,22 @@
                 <input type="text" id="nom" name="nom" value="<?= $don['nom'] ?>" class="form-control">
             </div>
             <div class="form-group my-3">
-                    <label for="categorie">Categorie: </label>
-                    <select name="categorie" id="categorie" class="form-control">
-                        <?php 
-                            $cat = $bdd->query("SELECT * FROM categories");
-                            while($donCat = $cat->fetch())
+                <label for="categorie">Categorie: </label>
+                <select name="categorie" id="categorie" class="form-control">
+                    <?php 
+                        $cat = $bdd->query("SELECT * FROM categories");
+                        while($donCat = $cat->fetch())
+                        {
+                            if($donCat['id'] == $don['id_categorie'])
                             {
-                                if($donCat['id'] == $don['id_categorie'])
-                                {
-                                    echo "<option value='".$donCat['id']."' selected>".$donCat['nom']."</option>";
-                                }else{
-                                    echo "<option value='".$donCat['id']."'>".$donCat['nom']."</option>";
-                                }
+                                echo "<option value='".$donCat['id']."' selected>".$donCat['nom']."</option>";
+                            }else{
+                                echo "<option value='".$donCat['id']."'>".$donCat['nom']."</option>";
                             }
-                            $cat->closeCursor();
-                        ?>
-                    </select>
+                        }
+                        $cat->closeCursor();
+                    ?>
+                </select>
             </div>
             <div class="form-group my-3">
                 <label for="description">Description: </label>

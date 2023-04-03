@@ -14,6 +14,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="adminstyle.css">
     <title>Administration - Portfolio</title>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -26,7 +27,7 @@
         <div>
             <a href="products.php" class="btn btn-secondary">Retour</a>
         </div>
-        <h2>Ajouter un produit</h2>
+        <h2>Ajouter un travail</h2>
         <form action="treatmentAddProduct.php" method="POST" enctype="multipart/form-data">
             <div class="form-group my-3">
                 <label for="nom">Titre: </label>

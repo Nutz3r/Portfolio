@@ -5,7 +5,9 @@
     padding: 0;
 }
 
-body{
+/***** LOGIN *****/
+
+.login{
     display: flex;
     background-color: black;
     height: 100vh;
@@ -33,7 +35,7 @@ body{
     margin-top: 20px;
     font-size: 15px;
     font-family: 'Aboreto', cursive;
-
+    
 }
 
 .log-form{
@@ -93,3 +95,14 @@ body{
     margin-top: 10px;
     color: #af0000;
 }
+
+/***** DASHBOARD *****/
+
+
+
+
+
+/***** TRAVAUX *****/
+
+    /***** ADD PRODUCTS *****/
+    
