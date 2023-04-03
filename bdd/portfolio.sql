@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 28 fév. 2023 à 17:55
+-- Généré le : lun. 03 avr. 2023 à 10:00
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -24,26 +24,51 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `categories`
+--
+
+DROP TABLE IF EXISTS `categories`;
+CREATE TABLE IF NOT EXISTS `categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `categories`
+--
+
+INSERT INTO `categories` (`id`, `nom`) VALUES
+(0, 'Non classé'),
+(8, 'Illustrator'),
+(9, 'Photoshop'),
+(10, 'Web'),
+(11, 'Vidéo'),
+(12, 'InDesign'),
+(13, 'Photographie');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `galerie`
 --
 
 DROP TABLE IF EXISTS `galerie`;
 CREATE TABLE IF NOT EXISTS `galerie` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `categorie` varchar(255) NOT NULL,
+  `id_categorie` int(11) NOT NULL,
   `nom` varchar(255) NOT NULL,
   `description` text NOT NULL,
-  `date` date NOT NULL,
   `image` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `galerie`
 --
 
-INSERT INTO `galerie` (`id`, `categorie`, `nom`, `description`, `date`, `image`) VALUES
-(5, 'illu', 'test', 'description', '1999-04-06', 'image.jpg');
+INSERT INTO `galerie` (`id`, `id_categorie`, `nom`, `description`, `image`) VALUES
+(6, 8, 'Lespagnard', '132322', '437327429kaiserschmarrn-rezept-einfach-fluffig-selber-machen-3.jpg');
 
 -- --------------------------------------------------------
 
