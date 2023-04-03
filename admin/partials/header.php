@@ -10,8 +10,12 @@
                     <a class="nav-link" href="dashboard.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="products.php">Products</a>
+                    <a class="nav-link" href="products.php">Travaux</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="categories.php">Catégories</a>
+                </li>
+
                
                
             </ul>

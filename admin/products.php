@@ -53,7 +53,7 @@
             <a href="dashboard.php" class="btn btn-secondary">Retour</a>
         </div>
         <div>
-            <a href="addProduct.php" class="btn btn-primary my-3">Ajouter un produit</a>
+            <a href="addProduct.php" class="btn btn-primary my-3">Ajouter un travail</a>
         </div>
         <?php
             if(isset($_GET['successDelete']))
@@ -88,7 +88,7 @@
                         echo "<tr>";
                             echo "<td>".$don['id']."</td>";
                             echo "<td>".$don['nom']."</td>";
-                            echo "<td>".$don['categorie']."</td>";
+                            echo "<td>".$don['id_categorie']."</td>";
                             echo "<td>".$don['date']."</td>";
                             echo "<td class='text-center'>";
                                 echo "<a href='updateProduct.php?id=".$don['id']."' class='btn btn-warning m-2'>Modifier</a>";

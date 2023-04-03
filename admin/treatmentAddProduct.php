@@ -9,7 +9,7 @@ if (isset($_POST['nom'])) {
     // vérif du contenu du formulaire et gestion error
     // init d'une variable $err à 0 
     $err = 0;
-    $categorie = $_POST['categorie'];
+    $categorie = $_POST['id_categorie'];
     $nom = $_POST['nom'];
     $date = $_POST['date'];
     $description = $_POST['description'];
@@ -31,10 +31,10 @@ if (isset($_POST['nom'])) {
     } else {
         $description = htmlspecialchars($_POST['description']);
     }
-    if (empty($_POST['categorie'])) {
+    if (empty($_POST['id_categorie'])) {
         $err = 4;
     } else {
-        $categorie = htmlspecialchars($_POST['categorie']);
+        $categorie = htmlspecialchars($_POST['id_categorie']);
     }
 
     //vérif si err sinon traitement
@@ -66,7 +66,7 @@ if (isset($_POST['nom'])) {
 
             if (move_uploaded_file($_FILES['image']['tmp_name'], $dossier . $fichiercptl)) {
                 require "../connexion.php";
-                $insert = $bdd->prepare("INSERT INTO galerie(nom,description,date,image,categorie) VALUES(?,?,?,?,?)");
+                $insert = $bdd->prepare("INSERT INTO galerie(nom,description,date,image,id_categorie) VALUES(?,?,?,?,?)");
                 $insert->execute([$nom, $description, $date, $fichiercptl,$categorie]);
                 $insert->closeCursor();
                 
