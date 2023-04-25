@@ -170,7 +170,7 @@
             <div class="photo"></div>
             <div class="photo"></div>
             <div class="photo"></div>
-            <h3 class="cat">Photography</h3>
+            <h3 class="cat"><a href="">Photography</a></h3>
         </div>
         <div class="categorie droite">
             <div class="photo"></div>
@@ -178,7 +178,7 @@
             <div class="photo"></div>
             <div class="photo"></div>
             <div class="photo"></div>
-            <h3 class="cat">Illustration</h3>
+            <h3 class="cat"><a href="">Illustration</a></h3>
         </div>
         <div class="categorie gauche">
             <div class="photo"></div>
@@ -186,8 +186,8 @@
             <div class="photo"></div>
             <div class="photo"></div>
             <div class="photo"></div>
-            <h3 class="cat">Video</h3>
-
+            <h3 class="cat"><a href="">Video</a></h3>
+    
         </div>
 
 

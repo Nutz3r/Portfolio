@@ -285,14 +285,14 @@ nav h1{
 
 .gauche{
     position: relative;
-    left: 0%;
+    left: -100%;
     margin-bottom: 150px
 }
 
 .droite{
     flex-direction: row-reverse;
     position: relative;
-    right: 0%;
+    right: -100%;
     margin-bottom: 150px
 }
 
@@ -311,13 +311,19 @@ nav h1{
 }
 
 h3.cat{
-    color: white;
     font-family: 'Aboreto', cursive;
     font-weight: 100;
     font-size: 35px;
     display: block;
     border-bottom: 1px solid white;
 }
+
+.cat a{
+    text-decoration: none;
+    color: white;
+}
+
+
 
 /***** GALERIE *****/
 

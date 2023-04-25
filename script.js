@@ -18,4 +18,16 @@ function changeImage() {
 /*********** BURGER MENU ***********/
 
 
-    /***********  ***********/
+
+/*********** MY WORK ***********/
+
+    const ligne = document.querySelector(".categorie")
+
+    document.addEventListener("scroll", (slideIn) => {
+      
+
+    });
+    
+
+/***********  ***********/
+
