@@ -280,24 +280,26 @@ nav h1{
 
 .categorie{
     display: flex;
+    align-items: center;
 }
 
 .gauche{
     position: relative;
     left: 0%;
+    margin-bottom: 150px
 }
 
 .droite{
     flex-direction: row-reverse;
     position: relative;
     right: 0%;
+    margin-bottom: 150px
 }
 
 .photo{
     width: 250px;
     height: 300px;
     background-color: grey;
-    margin-bottom: 150px;
 }
 
 .gauche .photo{
@@ -313,6 +315,8 @@ h3.cat{
     font-family: 'Aboreto', cursive;
     font-weight: 100;
     font-size: 35px;
+    display: block;
+    border-bottom: 1px solid white;
 }
 
 /***** GALERIE *****/

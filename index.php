@@ -168,15 +168,21 @@
             <div class="photo"></div>
             <div class="photo"></div>
             <div class="photo"></div>
+            <div class="photo"></div>
+            <div class="photo"></div>
             <h3 class="cat">Photography</h3>
         </div>
         <div class="categorie droite">
             <div class="photo"></div>
             <div class="photo"></div>
             <div class="photo"></div>
+            <div class="photo"></div>
+            <div class="photo"></div>
             <h3 class="cat">Illustration</h3>
         </div>
         <div class="categorie gauche">
+            <div class="photo"></div>
+            <div class="photo"></div>
             <div class="photo"></div>
             <div class="photo"></div>
             <div class="photo"></div>
