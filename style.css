@@ -195,9 +195,12 @@ nav h1{
 
 /***** PROFIL *****/
 .tempo{
-    height: 50vh;
+    height: 25vh;
     width: 100%;
     background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #profil{
@@ -261,10 +264,56 @@ nav h1{
 
 #competences{
     min-height: 100vh;
-    background-color: #c0c0c0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
+#myWork{
+    font-family: 'Aboreto', cursive;
+    color: white;
+    font-size: 55px;
+    font-weight: 100;
+    height: fit-content;
+}
 
+.categorie{
+    display: flex;
+}
+
+.gauche{
+    position: relative;
+    left: 0%;
+}
+
+.droite{
+    flex-direction: row-reverse;
+    position: relative;
+    right: 0%;
+}
+
+.photo{
+    width: 250px;
+    height: 300px;
+    background-color: grey;
+    margin-bottom: 150px;
+}
+
+.gauche .photo{
+    margin-right: 25px;
+}
+
+.droite .photo{
+    margin-left: 25px;
+}
+
+h3.cat{
+    color: white;
+    font-family: 'Aboreto', cursive;
+    font-weight: 100;
+    font-size: 35px;
+}
 
 /***** GALERIE *****/
 

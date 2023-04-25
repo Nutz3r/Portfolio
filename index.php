@@ -64,7 +64,7 @@
 
 
 <!-- ******************************************************** -->
-
+<!--
     <div id="accueil">
 
         <div class="discover">
@@ -78,47 +78,49 @@
             
         </div>
 
-    
-        <div class="section">
-            <div class="image-container">
-                <div class="moi" style="background-image: url(images/scroll/1.png);"></div>
-            </div>
+
+
+    <div class="section">
+        <div class="image-container">
+            <div class="moi" style="background-image: url(images/scroll/1.png);"></div>
         </div>
-
-
-        <div class="section">
-            <div class="image-container">
-                <div class="moi" style="background-image: url(images/scroll/2.png);"></div>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="image-container">
-                <div class="moi" style="background-image: url(images/scroll/3.png);"></div>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="image-container">
-                <div class="moi" style="background-image: url(images/scroll/4.png);"></div>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="image-container">
-                <div class="moi" style="background-image: url(images/scroll/5.png);"></div>
-            </div>
-        </div>
-
-        <div class="section last">
-            <div class="image-container">
-                <div class="moi" style="background-image: url(images/scroll/6.png);"></div>
-            </div>
-        </div>
-
-
     </div>
+    
+    
+    <div class="section">
+        <div class="image-container">
+            <div class="moi" style="background-image: url(images/scroll/2.png);"></div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="image-container">
+            <div class="moi" style="background-image: url(images/scroll/3.png);"></div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="image-container">
+            <div class="moi" style="background-image: url(images/scroll/4.png);"></div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="image-container">
+            <div class="moi" style="background-image: url(images/scroll/5.png);"></div>
+        </div>
+    </div>
+    
+    <div class="section last">
+        <div class="image-container">
+            <div class="moi" style="background-image: url(images/scroll/6.png);"></div>
+        </div>
+    </div>
+    
+    
+</div>
 
+-->    
 
 <!-- ******************************************************** -->
 <div class="tempo"></div>
@@ -157,9 +159,32 @@
     
 
 <!-- ******************************************************** -->
+<div class="tempo">
+<h2 id="myWork">My work</h2>
+</div>
 
     <div id="competences">
-        
+        <div class="categorie gauche">
+            <div class="photo"></div>
+            <div class="photo"></div>
+            <div class="photo"></div>
+            <h3 class="cat">Photography</h3>
+        </div>
+        <div class="categorie droite">
+            <div class="photo"></div>
+            <div class="photo"></div>
+            <div class="photo"></div>
+            <h3 class="cat">Illustration</h3>
+        </div>
+        <div class="categorie gauche">
+            <div class="photo"></div>
+            <div class="photo"></div>
+            <div class="photo"></div>
+            <h3 class="cat">Video</h3>
+
+        </div>
+
+
     </div>
 
 
