@@ -64,7 +64,6 @@
 
 
 <!-- ******************************************************** -->
-<!--
     <div id="accueil">
 
         <div class="discover">
@@ -118,9 +117,7 @@
     </div>
     
     
-</div>
-
--->    
+</div>   
 
 <!-- ******************************************************** -->
 <div class="tempo"></div>
@@ -130,28 +127,17 @@
             <div class="contenu"></div>
             <div class="infos texte">
                 <h1>Lorem Ipsum</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, repudiandae commodi obcaecati quas veritatis cum. Commodi nam aliquam neque itaque obcaecati magnam nesciunt distinctio reiciendis corporis, voluptatum cumque, ipsam ipsa earum molestiae repellat enim perferendis delectus atque numquam laudantium nisi asperiores voluptatibus iste! Temporibus, in? Architecto obcaecati volupetatum iusto deserunt in nisi omnis quae? Odit fugiat tempora a illo unde, nostrum maiores iusto. Praesentium, atque consequuntur voluptate veniam nesciunt, illo quis ut rem, id ducimus non. Itaque quas veniam maxime, corrupti praesentium libero doloribus enim placeat voluptatum labore, nam quia reprehenderit nobis eos voluptates assumenda sit esse, cum nesciunt voluptatem!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, repudiandae commodi obcaecati quas veritatis cum. Commodi nam aliquam neque itaque obcaecati magnam nesciunt distinctio reiciendis corporis, voluptatum cumque, ipsam ipsa earum molestiae repellat enim perferendis delectus atque numquam laudantium nisi asperiores voluptatibus iste!</p>
             </div>
-
-            
         </div>
 
         <div class="right-content">
             <div class="contenu"></div>
             <div class="infos texte-droite">
                 <h1>Lorem Ipsum</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, repudiandae commodi obcaecati quas veritatis cum. Commodi nam aliquam neque itaque obcaecati magnam nesciunt distinctio reiciendis corporis, voluptatum cumque, ipsam ipsa earum molestiae repellat enim perferendis delectus atque numquam laudantium nisi asperiores voluptatibus iste! Temporibus, in? Architecto obcaecati voluptatum iusto deserunt in nisi omnis quae? Odit fugiat tempora a illo unde, nostrum maiores iusto. Praesentium, atque consequuntur voluptate veniam nesciunt, illo quis ut rem, id ducimus non. Itaque quas veniam maxime, corrupti praesentium libero doloribus enim placeat voluptatum labore, nam quia reprehenderit nobis eos voluptates assumenda sit esse, cum nesciunt voluptatem!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, repudiandae commodi obcaecati quas veritatis cum. Commodi nam aliquam neque itaque obcaecati magnam nesciunt distinctio reiciendis corporis, voluptatum cumque, ipsam ipsa earum molestiae repellat enim perferendis delectus atque numquam laudantium nisi asperiores voluptatibus iste! Temporibus, in? </p>
             </div>
         </div>
-        
-        <div class="left-content">
-            <div class="contenu"></div>
-            <div class="infos texte">
-                <h1>Lorem Ipsum</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, repudiandae commodi obcaecati quas veritatis cum. Commodi nam aliquam neque itaque obcaecati magnam nesciunt distinctio reiciendis corporis, voluptatum cumque, ipsam ipsa earum molestiae repellat enim perferendis delectus atque numquam laudantium nisi asperiores voluptatibus iste! Temporibus, in? Architecto obcaecati volupetatum iusto deserunt in nisi omnis quae? Odit fugiat tempora a illo unde, nostrum maiores iusto. Praesentium, atque consequuntur voluptate veniam nesciunt, illo quis ut rem, id ducimus non. Itaque quas veniam maxime, corrupti praesentium libero doloribus enim placeat voluptatum labore, nam quia reprehenderit nobis eos voluptates assumenda sit esse, cum nesciunt voluptatem!</p>
-            </div>
-        </div>
-    
     </div>
 
     
@@ -170,7 +156,7 @@
             <div class="photo"></div>
             <div class="photo"></div>
             <div class="photo"></div>
-            <h3 class="cat"><a href="">Photography</a></h3>
+            <h3 class="cat"><a href="#">Photography</a></h3>
         </div>
         <div class="categorie droite">
             <div class="photo"></div>
@@ -178,7 +164,7 @@
             <div class="photo"></div>
             <div class="photo"></div>
             <div class="photo"></div>
-            <h3 class="cat"><a href="">Illustration</a></h3>
+            <h3 class="cat"><a href="#">Illustration</a></h3>
         </div>
         <div class="categorie gauche">
             <div class="photo"></div>
@@ -186,7 +172,7 @@
             <div class="photo"></div>
             <div class="photo"></div>
             <div class="photo"></div>
-            <h3 class="cat"><a href="">Video</a></h3>
+            <h3 class="cat"><a href="#">Video</a></h3>
     
         </div>
 

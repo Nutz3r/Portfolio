@@ -156,7 +156,7 @@ nav h1{
 .section{
     min-height: 100vh;
     position: relative;
-    z-index: 2;
+    z-index: 0;
 }
 
 .last{
@@ -285,14 +285,14 @@ nav h1{
 
 .gauche{
     position: relative;
-    left: -100%;
+   /* left: -100%; */
     margin-bottom: 150px
 }
 
 .droite{
     flex-direction: row-reverse;
     position: relative;
-    right: -100%;
+   /* right: -100%; */
     margin-bottom: 150px
 }
 
