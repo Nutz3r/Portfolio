@@ -15,6 +15,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="categories.php">Catégories</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="skills.php">Compétences</a>
+                </li>
 
                
                

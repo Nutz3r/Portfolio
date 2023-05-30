@@ -65,7 +65,7 @@
 
 <!-- ******************************************************** -->
     <div id="accueil">
-
+        
         <div class="discover">
 
             <h1 id="hello">Looking for...</h1>
