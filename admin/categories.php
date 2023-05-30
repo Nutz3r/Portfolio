@@ -5,6 +5,10 @@
         header("LOCATION:index.php");
     }
     require "../connexion.php";
+    $limit=3;
+    $reqcount=$bdd->query("SELECT * FROM categories");
+    $count = $reqcount->rowCount();
+    $nbpage= ceil($count/$limit);
 
     if(isset($_GET['delete']))
     {
@@ -26,9 +30,6 @@
         $delete->closeCursor();
         header("LOCATION:categories.php?delsuccess=".$_GET['delete']);
     }
-
-   
-
 ?>
 
 <!DOCTYPE html>
@@ -46,7 +47,7 @@
         include("partials/header.php");
     ?>
     <div class="container">
-        <h1>Catégorie</h1>
+        <h1>Catégories</h1>
         <a href="addCategorie.php" class="btn btn-primary">Ajouter</a>
         <?php 
             if(isset($_GET['delsuccess']))
@@ -61,7 +62,52 @@
             {
                 echo "<div class='alert alert-warning my-3'>Vous avez bien modifié la catégorie n°".$_GET['update']."</div>";
             }
+    
+    
+    /*** PAGINATION ***/
+            if(isset($_GET['page']))
+            {
+                $pg = $_GET['page'];
+            }else{
+                $pg = 1;
+            }
+            $offset=($pg-1)*$limit; 
 
+            if($count > $limit)
+            {
+                echo '<ul class="pagination">';
+                    if($pg>1)
+                    {
+                        echo '<li class="page-item">';
+                            echo '<a  href="categories.php?page='.($pg-1).'" class="page-link">Previous</a>';
+                        echo '</li>';
+                    }else{
+                        echo '<li class="page-item disabled">';
+                            echo '<a  href="categories.php?page='.($pg-1).'" class="page-link">Previous</a>';
+                        echo '</li>';
+                    }
+                    for($cpt=1; $cpt<=$nbpage; $cpt++)
+                    {
+                        if($cpt == $pg)
+                        {
+                            echo '<li class="page-item "><a class="page-link active" href="categories.php?page='.$cpt.'">'.$cpt.'</a></li>';
+                        }else{
+                            echo '<li class="page-item"><a class="page-link" href="categories.php?page='.$cpt.'">'.$cpt.'</a></li>';
+                        }
+                    }
+                    if($pg!=$nbpage && $pg<$nbpage)
+                    {
+                        echo '<li class="page-item">';
+                            echo '<a  href="categories.php?page='.($pg+1).'" class="page-link">Next</a>';
+                        echo '</li>';
+                    }else{
+                        echo '<li class="page-item disabled">';
+                            echo '<a  href="categories.php?page='.($pg+1).'" class="page-link">Next</a>';
+                        echo '</li>';
+                    }
+                echo '</ul>';
+            }
+/*** FIN PAGINATION ***/
         ?>
         <table class="table table-striped">
             <thead>
@@ -72,8 +118,10 @@
             </thead>
             <tbody>
                 <?php
-                    $req = $bdd->query("SELECT * FROM categories ORDER BY id ASC");
-                    while($don = $req->fetch())
+                    $req = $bdd->prepare("SELECT * FROM categories LIMIT :offset, :mylimit");
+                    $req->bindParam(':offset',$offset, PDO::PARAM_INT);
+                    $req->bindParam(":mylimit", $limit, PDO::PARAM_INT);
+                    $req->execute();                    while($don = $req->fetch())
                     {
                         echo "<tr>";
                             echo "<td class='text-center'>".$don['nom']."</td>";

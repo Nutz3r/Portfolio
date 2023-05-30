@@ -332,6 +332,13 @@ h3.cat{
     background-color: #011640;
 }
 
+.echo{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    background-color: grey;
+}
+
 
 
 /***** CONTACT *****/

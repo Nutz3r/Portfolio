@@ -4,7 +4,6 @@
     {
         header("LOCATION:index.php");
     }
-
     require "../connexion.php";
     $limit=3;
     $reqcount=$bdd->query("SELECT * FROM galerie");
@@ -85,6 +84,9 @@
             {
                 echo "<div class='alert alert-warning'>Vous avez bien modifié le produit n°".$_GET['updatesuccess']."</div>";
             }
+
+        
+    /*** PAGINATION ***/
             if(isset($_GET['page']))
             {
                 $pg = $_GET['page'];
@@ -127,6 +129,9 @@
                     }
                 echo '</ul>';
             }
+
+    /*** FIN PAGINATION ***/
+
         ?>
         <table class="table table-striped">
             <thead>
