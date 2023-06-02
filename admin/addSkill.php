@@ -24,7 +24,7 @@
     <div class="container">
         <h1>Administration des skills</h1>
         <div>
-            <a href="Skill.php" class="btn btn-secondary">Retour</a>
+            <a href="Skills.php" class="btn btn-secondary">Retour</a>
         </div>
         <h2>Ajouter un skill</h2>
         <form action="treatmentAddSkill.php" method="POST">

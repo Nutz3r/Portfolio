@@ -5,7 +5,7 @@
         header("LOCATION:index.php");
     }
     require "../connexion.php";
-    $limit=3;
+    $limit=10;
     $reqcount=$bdd->query("SELECT * FROM galerie");
     $count = $reqcount->rowCount();
     $nbpage= ceil($count/$limit);
@@ -27,14 +27,14 @@
         unlink("../images/portfolio/mini_".$donVerif['image']);
 
         // supprimer les images associée dans la table images
-        $delgal = $bdd->prepare("SELECT * FROM images WHERE id_products=?");
+        $delgal = $bdd->prepare("SELECT * FROM galerie WHERE id=?");
         $delgal->execute([$id]);
         while($donDelGal = $delgal->fetch()){
                 unlink("../images/".$donDelGal['fichier']);
             }
         $delgal->closeCursor();
 
-        $deleteGal = $bdd->prepare("DELETE FROM images WHERE id_products=?");
+        $deleteGal = $bdd->prepare("DELETE FROM galerie WHERE id=?");
         $deleteGal->execute([$id]);
         $deleteGal->closeCursor();
 
@@ -65,9 +65,6 @@
     ?>
     <div class="container">
         <h1>Administration des travaux</h1>
-        <div>
-            <a href="dashboard.php" class="btn btn-secondary">Retour</a>
-        </div>
         <div>
             <a href="addProduct.php" class="btn btn-primary my-3">Ajouter un travail</a>
         </div>

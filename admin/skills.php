@@ -5,7 +5,7 @@
         header("LOCATION:index.php");
     }
     require "../connexion.php";
-    $limit=3;
+    $limit=10;
     $reqcount=$bdd->query("SELECT * FROM skills");
     $count = $reqcount->rowCount();
     $nbpage= ceil($count/$limit);
@@ -44,7 +44,7 @@
     ?>
     <div class="container">
         <h1>Compétences</h1>
-        <a href="addSkill.php" class="btn btn-primary">Ajouter</a>
+        <a href="addSkill.php" class="btn btn-primary my-3">Ajouter une compétence</a>
         <?php 
             if(isset($_GET['delsuccess']))
             {
