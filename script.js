@@ -20,14 +20,8 @@ function changeImage() {
 
 
 /*********** MY WORK ***********/
-
-    const ligne = document.querySelector(".categorie")
-
-    document.addEventListener("scroll", (slideIn) => {
-      
-
-    });
     
+      /* myWork est à 7644px */
 
 /***********  ***********/
 

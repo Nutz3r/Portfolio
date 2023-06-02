@@ -9,6 +9,48 @@ html{
     scroll-behavior:smooth
 }
 
+/***** SCROLL *****/
+
+#scroll{
+    width: 60px;
+    height: 45px;
+    background-color: white;
+    color: black;
+    line-height: 45px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+}
+
+#cible{
+    width: 160px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+#quelleslide{
+    width: 100px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
 /***** MENU *****/
 header{
     display: none;
@@ -268,6 +310,7 @@ nav h1{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    overflow: hidden;
 }
 
 #myWork{
@@ -323,6 +366,10 @@ h3.cat{
     color: white;
 }
 
+/* animation*/
+.slideIn{
+    left: 0;
+}
 
 
 /***** GALERIE *****/

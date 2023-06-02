@@ -12,7 +12,7 @@
     <title>Antoine Lespagnard - Portfolio</title>
 </head>
 <body> 
-    
+
 
 <!-- ******************************************************** -->
     <nav>
@@ -26,7 +26,7 @@
             <h1 id="titre1">Profil</h1>
         </a>
             
-        <a class="btn_name" href="#competences">
+        <a class="btn_name" href="#myWork">
                 <div id="button">
                     <div class="button-hover">
                         <div class="button-triangle"></div>
@@ -61,6 +61,7 @@
         <a class="back-top" href="#accueil"><img src="images/icons/back-to-top.svg" alt=""></a>
 
     </nav>
+
 
 
 <!-- ******************************************************** -->
