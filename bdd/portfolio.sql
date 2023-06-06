@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 03 avr. 2023 à 10:00
+-- Généré le : mar. 06 juin 2023 à 13:57
 -- Version du serveur : 5.7.36
 -- Version de PHP : 7.4.26
 
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
+) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `categories`
@@ -40,12 +40,28 @@ CREATE TABLE IF NOT EXISTS `categories` (
 
 INSERT INTO `categories` (`id`, `nom`) VALUES
 (0, 'Non classé'),
-(8, 'Illustrator'),
-(9, 'Photoshop'),
-(10, 'Web'),
-(11, 'Vidéo'),
-(12, 'InDesign'),
-(13, 'Photographie');
+(28, 'Photographie'),
+(27, 'InDesign'),
+(26, 'Vidéo'),
+(25, 'Web'),
+(23, 'Illustrator'),
+(24, 'Photoshop');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `contact`
+--
+
+DROP TABLE IF EXISTS `contact`;
+CREATE TABLE IF NOT EXISTS `contact` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `message` text NOT NULL,
+  `date` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -61,14 +77,14 @@ CREATE TABLE IF NOT EXISTS `galerie` (
   `description` text NOT NULL,
   `image` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `galerie`
 --
 
 INSERT INTO `galerie` (`id`, `id_categorie`, `nom`, `description`, `image`) VALUES
-(6, 8, 'Lespagnard', '132322', '437327429kaiserschmarrn-rezept-einfach-fluffig-selber-machen-3.jpg');
+(13, 26, 'Illustrator', 'oiuyt', '1118864491338016793video-1.jpg');
 
 -- --------------------------------------------------------
 
@@ -91,6 +107,31 @@ CREATE TABLE IF NOT EXISTS `identifiants` (
 
 INSERT INTO `identifiants` (`id`, `login`, `password`, `email`) VALUES
 (1, 'admin', '$2y$10$AyMVw6AcOyn8ifq/rS5XQuEauzTOmBtVEDLTSospCfatsMOs9Nq8S', 'admin@epse.be');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `skills`
+--
+
+DROP TABLE IF EXISTS `skills`;
+CREATE TABLE IF NOT EXISTS `skills` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(70) NOT NULL,
+  `fichier` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `skills`
+--
+
+INSERT INTO `skills` (`id`, `nom`, `fichier`) VALUES
+(6, 'Premiere Pro', ''),
+(14, 'Illustrator', '338016793video-1.jpg'),
+(15, 'After Effect', ''),
+(16, 'Figma', ''),
+(17, 'Photogrpahy', '');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
