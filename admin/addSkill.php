@@ -33,6 +33,10 @@
                 <input type="text" id="nom" name="nom" class="form-control">
             </div>
             <div class="form-group my-3">
+                <label for="image">Image: </label>
+                <input type="file" name="image" id="image" class="form-control">
+            </div>
+            <div class="form-group my-3">
                 <input type="submit" value="Ajouter" class="btn btn-success">
             </div>
         </form>

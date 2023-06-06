@@ -148,7 +148,21 @@
 <!-- ******************************************************** -->
 <div class="tempo"></div>
 <div id="competences">
+        <?php
 
+
+            $req = $bdd->prepare("SELECT * FROM skills ORDER BY id DESC");
+            $req->execute();
+            while($don = $req->fetch())
+            {
+                //var_dump($don);
+                echo "<a class='skills' href='index.php?id=".$don['id']."'>";
+                 /*   echo "<img src='images/mini_".$don['image']."' alt='image de ".$don['nom']."'>"; */
+                    echo "<div class='prod-title'>".$don['nom']."</div>";
+                echo "</a>";
+            }
+            $req->closeCursor();
+        ?>
 </div>
 
 <!-- ******************************************************** -->
@@ -157,7 +171,7 @@
 <h2>My work</h2>
 </div>
 
-    <div id="competences">
+    <div id="myWork">
         <div class="categorie gauche">
             <div class="photo"></div>
             <div class="photo"></div>
