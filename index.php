@@ -33,7 +33,7 @@
                         <div class="button-body"></div>
                     </div>
                 </div>
-            <h1 id="titre1">Compétences</h1>            
+            <h1 id="titre1">Skills</h1>            
         </a>
 
         <a class="btn_name" href="#galerie">
@@ -43,7 +43,7 @@
                         <div class="button-body"></div>
                     </div>
                 </div>
-            <h1 id="titre1">Galerie</h1>  
+            <h1 id="titre1">My•Work</h1>  
         </a>
 
         <a class="btn_name" href="#contact">
@@ -123,7 +123,7 @@
 <!-- ******************************************************** -->
 <div class="tempo"></div>
 
-    <div id="profil">
+    <div id="profil"> <!-- PRESENTATION ET SKILLS -->
         <div class="left-content">
             <div class="contenu"></div>
             <div class="infos texte">
@@ -146,8 +146,15 @@
     
 
 <!-- ******************************************************** -->
+<div class="tempo"></div>
+<div id="competences">
+
+</div>
+
+<!-- ******************************************************** -->
+
 <div class="tempo">
-<h2 id="myWork">My work</h2>
+<h2>My work</h2>
 </div>
 
     <div id="competences">
@@ -180,16 +187,11 @@
 
     </div>
 
-
 <!-- ******************************************************** -->
+<div class="tempo">
+<h2>Contact Me</h2>
 
-    <div id="galerie">
-        <div class="echo">
-
-        </div>
-    </div>
-
-<!-- ******************************************************** -->
+</div>
 
     <div id="contact">
         <div class="containercontact">

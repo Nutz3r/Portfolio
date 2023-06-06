@@ -246,6 +246,14 @@ nav h1{
     justify-content: center;
 }
 
+.tempo h2{
+    font-family: 'Aboreto', cursive;
+    color: white;
+    font-size: 55px;
+    font-weight: 100;
+    height: fit-content;
+}
+
 #profil{
     background-color: black;
     color: white;
@@ -312,14 +320,6 @@ nav h1{
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
-}
-
-#myWork{
-    font-family: 'Aboreto', cursive;
-    color: white;
-    font-size: 55px;
-    font-weight: 100;
-    height: fit-content;
 }
 
 .categorie{
@@ -394,7 +394,7 @@ h3.cat{
 #contact{
     position: relative;
     min-height: 100vh;
-    background-color: #c0c0c0;
+    background-color: black;
 }
 
 input[type=text], textarea, input[type=email] {
