@@ -34,6 +34,8 @@
             <a class="cards" href="products.php">Travaux</a>
             <a class="cards" href="categories.php">Catégories</a>
             <a class="cards" href="skills.php">Compétences</a>
+            <a class="cards" href="contact.php">Contact</a>
+
             
         </div>
     

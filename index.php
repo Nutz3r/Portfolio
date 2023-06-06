@@ -192,7 +192,27 @@
 <!-- ******************************************************** -->
 
     <div id="contact">
-        
+        <div class="containercontact">
+            <h1 class="contact">Formulaire de contact</h1>
+                <form action="traitement.php" method="POST">
+                    <?php
+                        if(isset($_GET['add']))
+                        {
+                            echo "<div class='success'>Votre message a bien été envoyé</div>";
+                        }
+                    ?>
+                <input type="" placeholder="your Name" id="nom" name="nom" required>
+                <input type="email" name="email" id="email" placeholder="E-mail" required>
+                <textarea id="message" cols="30" rows="10" placeholder="Your Message" name="message" required></textarea>
+                <input type="submit" value="submit" class="btnwsh">
+                    <?php
+                        if(isset($_GET['error']))
+                        {
+                            echo "<div class='error'>Une erreur est survenue</div>";
+                        }
+                    ?>
+                </form>
+        </div>
     </div>
 
 <!-- ******************************************************** -->
