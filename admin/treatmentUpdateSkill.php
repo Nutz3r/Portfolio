@@ -37,15 +37,76 @@
             $nom = htmlspecialchars($_POST['nom']);
         }
 
+        
+
         //vérif si err sinon traitement
         if($err==0){
-            require "../connexion.php";
-            $update = $bdd->prepare("UPDATE skills SET nom=? WHERE id=?");
-            $update->execute([$nom, $id]);
-            $update->closeCursor();
-            header("LOCATION:skills.php?update=".$id);
+            if(empty($_FILES['image']['tmp_name']))
+            {
+                require "../connexion.php";
+                $update = $bdd->prepare("UPDATE skills SET nom=? WHERE id=?");
+                $update->execute([$nom,$id]);
+                $update->closeCursor();
+                header("LOCATION:skills.php?update=".$id);
+
+            }else{
+
+                $dossier = "../images/skills/"; // ../images/monfichier.jpg
+                $fichier = basename($_FILES['image']['name']);
+                $taille_maxi = 2000000;
+                $taille = filesize($_FILES['image']['tmp_name']);
+                $extensions = ['.png','.jpg','.jpeg'];
+                $extension = strrchr($_FILES['image']['name'],'.');
+
+                if(!in_array($extension, $extensions))
+                {
+                    $erreur = 1;
+                }
+                
+                if($taille>$taille_maxi){
+                    $erreur = 2;
+                }
+
+
+                if(!isset($erreur))
+                {
+                    // traitement
+                    $fichier = strtr($fichier, 
+                    'ÀÁÂÃÄÅÇÈÉÊËÌÍÎÏÒÓÔÕÖÙÚÛÜÝàáâãäåçèéêëìíîïðòóôõöùúûüýÿ', 
+                    'AAAAAACEEEEIIIIOOOOOUUUUYaaaaaaceeeeiiiioooooouuuuyy');
+                    $fichier = preg_replace('/([^.a-z0-9]+)/i','-',$fichier); 
+                    $fichiercptl = rand().$fichier; 
+
+                    if(move_uploaded_file($_FILES['image']['tmp_name'], $dossier.$fichiercptl))
+                    {
+
+                        unlink("../images/skills/".$don['fichier']);
+                        require "../connexion.php";
+                        $update = $bdd->prepare("UPDATE skills SET nom=?, fichier=? WHERE id=?");
+                        $update->execute([$nom,$fichiercptl,$id]);
+                        $update->closeCursor();
+                        header("LOCATION:skills.php?update=".$id);
+
+
+                    
+        
+
+                    }else{
+                        header("LOCATION:updateskill.php?id=".$id."&errorimg=3");
+
+                    }             
+                }else{
+                    header("LOCATION:updateskill.php?id=".$id."&errorimg=".$erreur);
+                }
+
+
+
+            }
+
+
+
         }else{
-            header("LOCATION:addSkill.php?error=".$err);
+            header("LOCATION:updateskill.php?id=".$id."&error=".$err);
         }
 
     }else{

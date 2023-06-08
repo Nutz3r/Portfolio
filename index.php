@@ -26,7 +26,7 @@
             <h1 id="titre1">Profil</h1>
         </a>
             
-        <a class="btn_name" href="#myWork">
+        <a class="btn_name" href="#competences">
                 <div id="button">
                     <div class="button-hover">
                         <div class="button-triangle"></div>
@@ -36,7 +36,7 @@
             <h1 id="titre1">Skills</h1>            
         </a>
 
-        <a class="btn_name" href="#galerie">
+        <a class="btn_name" href="#myWork">
                 <div id="button">
                     <div class="button-hover">
                         <div class="button-triangle"></div>
@@ -146,28 +146,28 @@
     
 
 <!-- ******************************************************** -->
-<div class="tempo"></div>
+<div class="tempo">
+    <h2>My Skills</h2>
+</div>
 <div id="competences">
-        <?php
 
+    <div class="skillsWrapper">
+        <?php
 
             $req = $bdd->prepare("SELECT * FROM skills ORDER BY id DESC");
             $req->execute();
             while($don = $req->fetch())
             {
-                //var_dump($don);
-                echo "<a class='skills' href='index.php?id=".$don['id']."'>";
-                 /*   echo "<img src='images/mini_".$don['image']."' alt='image de ".$don['nom']."'>"; */
-                    echo "<div class='prod-title'>".$don['nom']."</div>";
-                echo "</a>";
-            }
+                echo "<img class='skillsIcons' src='images/skills/".$don['fichier']."' alt='image de ".$don['nom']."'>";
+                }
             $req->closeCursor();
         ?>
+    </div>
 </div>
 
 <!-- ******************************************************** -->
 
-<div class="tempo">
+<div class="tempo myWork">
 <h2>My work</h2>
 </div>
 
@@ -178,7 +178,7 @@
             <div class="photo"></div>
             <div class="photo"></div>
             <div class="photo"></div>
-            <h3 class="cat"><a href="#">Photography</a></h3>
+            <h3 class="cat"><a href="gallery.php?cat=Photographie">Photography</a></h3>
         </div>
         <div class="categorie droite">
             <div class="photo"></div>
@@ -186,7 +186,7 @@
             <div class="photo"></div>
             <div class="photo"></div>
             <div class="photo"></div>
-            <h3 class="cat"><a href="#">Illustration</a></h3>
+            <h3 class="cat"><a href="gallery.php?cat=Illustrator">Illustration</a></h3>
         </div>
         <div class="categorie gauche">
             <div class="photo"></div>
@@ -194,7 +194,7 @@
             <div class="photo"></div>
             <div class="photo"></div>
             <div class="photo"></div>
-            <h3 class="cat"><a href="#">Video</a></h3>
+            <h3 class="cat"><a href="gallery.php?cat=Vidéo">Video</a></h3>
     
         </div>
 

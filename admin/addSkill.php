@@ -17,25 +17,27 @@
     <title>Administration des skills</title>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
+<body style="background-color: rgb(36, 35, 35)">
     <?php
         include("partials/header.php");
     ?>
-    <div class="container">
-        <h1>Administration des skills</h1>
+    <div class="container link-light">
+        <h1 class="titre pt-5 text-center">Administration des skills</h1>
         <div>
-            <a href="Skills.php" class="btn btn-secondary">Retour</a>
+            <a href="skills.php" class="btn btn-secondary">Retour</a>
         </div>
-        <h2>Ajouter un skill</h2>
-        <form action="treatmentAddSkill.php" method="POST">
+        <h2>Ajouter un skills</h2>
+        <form action="treatmentAddskill.php" method="POST" enctype="multipart/form-data">
             <div class="form-group my-3">
                 <label for="nom">Nom: </label>
                 <input type="text" id="nom" name="nom" class="form-control">
             </div>
+            
             <div class="form-group my-3">
                 <label for="image">Image: </label>
                 <input type="file" name="image" id="image" class="form-control">
             </div>
+            
             <div class="form-group my-3">
                 <input type="submit" value="Ajouter" class="btn btn-success">
             </div>

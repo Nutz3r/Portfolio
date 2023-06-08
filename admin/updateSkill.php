@@ -9,7 +9,7 @@
      {
          $id = htmlspecialchars($_GET['id']);
      }else{
-         header("LOCATION:products.php");
+         header("LOCATION:skills.php");
      }
  
      // vérifier si l'id est dans la bdd
@@ -31,24 +31,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <title>Administration des compétences</title>
+    <title>Administration des Skills</title>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
+<body style="background-color: rgb(36, 35, 35)">
     <?php
         include("partials/header.php");
     ?>
-    <div class="container">
-        <h1>Administration des compétences</h1>
+    <div class="container link-light">
+        <h1 class="titre pt-5 text-center">Administration</h1>
         <div>
             <a href="skills.php" class="btn btn-secondary">Retour</a>
         </div>
         <h2>Modifier <?= $don['nom'] ?></h2>
-        <form action="treatmentUpdateSkill.php?id=<?= $id ?>" method="POST">
+        <form action="treatmentUpdateskill.php?id=<?= $id ?>" method="POST" enctype="multipart/form-data">
             <div class="form-group my-3">
                 <label for="nom">Nom: </label>
                 <input type="text" id="nom" name="nom" class="form-control" value="<?= $don['nom'] ?>">
             </div>
+            
+            <div class="form-group my-3">
+                <div class="col-4">
+                    <img src="../images/skills/<?= $don['fichier'] ?>" alt="logo de <?= $don['nom'] ?>" class="img-fluid">
+                </div>
+
+                <label for="image">Image: </label>
+                <input type="file" name="image" id="image" class="form-control">
+            </div>
+
             <div class="form-group my-3">
                 <input type="submit" value="Modifier" class="btn btn-warning">
             </div>
