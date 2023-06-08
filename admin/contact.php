@@ -5,6 +5,10 @@
         header("LOCATION:index.php");
     }
     require "../connexion.php";
+    $limit=2;
+    $reqcount=$bdd->query("SELECT * FROM contact");
+    $count = $reqcount->rowCount();
+    $nbpage= ceil($count/$limit);
 
     if(isset($_GET['delete']))
     {
@@ -60,6 +64,7 @@
             </thead>
             <tbody>
                 <?php
+                
                     $req = $bdd->query("SELECT id, nom, email, DATE_FORMAT(date, '%d/%m/%Y %Hh%i') as mydate FROM contact ORDER BY date DESC");
                     while($don = $req->fetch())
                     {
@@ -75,6 +80,53 @@
                         echo "</tr>";
                     }
                     $req->closeCursor();
+
+        /*** PAGINATION ***/
+            if(isset($_GET['page']))
+            {
+                $pg = $_GET['page'];
+            }else{
+                $pg = 1;
+            }
+            $offset=($pg-1)*$limit; 
+
+            if($count > $limit)
+            {
+                echo '<ul class="pagination">';
+                    if($pg>1)
+                    {
+                        echo '<li class="page-item">';
+                            echo '<a  href="contact.php?page='.($pg-1).'" class="page-link">Previous</a>';
+                        echo '</li>';
+                    }else{
+                        echo '<li class="page-item disabled">';
+                            echo '<a  href="contact.php?page='.($pg-1).'" class="page-link">Previous</a>';
+                        echo '</li>';
+                    }
+                    for($cpt=1; $cpt<=$nbpage; $cpt++)
+                    {
+                        if($cpt == $pg)
+                        {
+                            echo '<li class="page-item "><a class="page-link active" href="contact.php?page='.$cpt.'">'.$cpt.'</a></li>';
+                        }else{
+                            echo '<li class="page-item"><a class="page-link" href="contact.php?page='.$cpt.'">'.$cpt.'</a></li>';
+                        }
+                    }
+                    if($pg!=$nbpage && $pg<$nbpage)
+                    {
+                        echo '<li class="page-item">';
+                            echo '<a  href="contact.php?page='.($pg+1).'" class="page-link">Next</a>';
+                        echo '</li>';
+                    }else{
+                        echo '<li class="page-item disabled">';
+                            echo '<a  href="contact.php?page='.($pg+1).'" class="page-link">Next</a>';
+                        echo '</li>';
+                    }
+                echo '</ul>';
+            }
+
+    /*** FIN PAGINATION ***/
+
                 ?>
             </tbody>
         </table>

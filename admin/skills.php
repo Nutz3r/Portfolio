@@ -5,6 +5,10 @@
         header("LOCATION:index.php");
     }
     require "../connexion.php";
+    $limit=3;
+    $reqcount=$bdd->query("SELECT * FROM skills");
+    $count = $reqcount->rowCount();
+    $nbpage= ceil($count/$limit);
 
     if(isset($_GET['delete']))
     {
@@ -82,13 +86,60 @@
                             echo "<td class='text-center'>";
                             if($don['id']!=0)
                             {
-                                echo "<a href='updateskill.php?id=".$don['id']."' class='btn btn-warning mx-2'>Modifier</a>";
+                                echo "<a href='updateSkill.php?id=".$don['id']."' class='btn btn-warning mx-2'>Modifier</a>";
                                 echo "<a href='skills.php?delete=".$don['id']."' class='btn btn-danger mx-2'>Supprimer</a>";
                             }
                             echo "</td>";
                         echo "</tr>";
                     }
                     $req->closeCursor();
+        
+        /*** PAGINATION ***/
+            if(isset($_GET['page']))
+            {
+                $pg = $_GET['page'];
+            }else{
+                $pg = 1;
+            }
+            $offset=($pg-1)*$limit; 
+
+            if($count > $limit)
+            {
+                echo '<ul class="pagination">';
+                    if($pg>1)
+                    {
+                        echo '<li class="page-item">';
+                            echo '<a  href="skills.php?page='.($pg-1).'" class="page-link">Previous</a>';
+                        echo '</li>';
+                    }else{
+                        echo '<li class="page-item disabled">';
+                            echo '<a  href="skills.php?page='.($pg-1).'" class="page-link">Previous</a>';
+                        echo '</li>';
+                    }
+                    for($cpt=1; $cpt<=$nbpage; $cpt++)
+                    {
+                        if($cpt == $pg)
+                        {
+                            echo '<li class="page-item "><a class="page-link active" href="skills.php?page='.$cpt.'">'.$cpt.'</a></li>';
+                        }else{
+                            echo '<li class="page-item"><a class="page-link" href="skills.php?page='.$cpt.'">'.$cpt.'</a></li>';
+                        }
+                    }
+                    if($pg!=$nbpage && $pg<$nbpage)
+                    {
+                        echo '<li class="page-item">';
+                            echo '<a  href="skills.php?page='.($pg+1).'" class="page-link">Next</a>';
+                        echo '</li>';
+                    }else{
+                        echo '<li class="page-item disabled">';
+                            echo '<a  href="skills.php?page='.($pg+1).'" class="page-link">Next</a>';
+                        echo '</li>';
+                    }
+                echo '</ul>';
+            }
+
+    /*** FIN PAGINATION ***/
+
                 ?>
             </tbody>
         </table>
