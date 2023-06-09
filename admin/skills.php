@@ -125,7 +125,7 @@
                 <?php
                     
 
-                                        $req = $bdd->prepare("SELECT * FROM skills ORDER BY id ASC LIMIT :offset, :mylimit");
+                    $req = $bdd->prepare("SELECT * FROM skills ORDER BY id ASC LIMIT :offset, :mylimit");
                     $req->bindParam(':offset',$offset, PDO::PARAM_INT);
                     $req->bindParam(":mylimit", $limit, PDO::PARAM_INT);
                     $req->execute();
