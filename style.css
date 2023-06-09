@@ -313,7 +313,7 @@ nav h1{
 /***** SKILLS *****/
 
 #competences{
-    min-height: 10vh;
+    min-height: 30vh;
     background-color: black;
     display: grid;
     position: relative;
@@ -338,11 +338,14 @@ nav h1{
     width: 70%;
     justify-content: center;
     margin: 0 auto;
+    row-gap: 25%;
+    position: relative;
+    z-index: 200;
 }
 
 #competences img{
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     object-fit: contain;
 }
 
@@ -361,6 +364,13 @@ nav h1{
 .categorie{
     display: flex;
     align-items: center;
+    transition: all 1s;
+    text-decoration: none;
+}
+
+.categorie:hover{
+    opacity: 50%;
+    cursor: pointer;
 }
 
 .gauche{
@@ -396,17 +406,15 @@ h3.cat{
     font-size: 35px;
     display: block;
     border-bottom: 1px solid white;
-}
-
-.cat a{
-    text-decoration: none;
     color: white;
 }
 
 .travaux{
-    height: 300px;
-    max-width: 100px;
+    display: flex;
+    height: 250px;
     object-fit: cover;
+    display: grid;
+    margin: 0 10px 0 10px;
 }
 
 

@@ -172,20 +172,9 @@
 </div>
 
     <div class="montravail">
-        <div class="categorie gauche">
-            <?php
-                $req = $bdd -> prepare("SELECT * FROM galerie WHERE id_categorie=28 ORDER BY id DESC");
-                $req->execute();
-                while($don = $req->fetch()){
-                    echo "<img class='travaux' src='images/portfolio/'".$don['image']."' alt='image de ".$don['nom']."'>";
-                }
-            ?>
-            <h3 class="cat"><a href="gallery.php?cat=Photographie">Photography</a></h3>
-        </div>
 
 
-
-        <div class="categorie droite">
+        <a class="categorie gauche" href="gallery.php?cat=Illustrator">
             <?php
                 $req = $bdd -> prepare("SELECT * FROM galerie WHERE id_categorie=23 ORDER BY id DESC");
                 $req->execute();
@@ -193,20 +182,32 @@
                     echo "<img class='travaux' src='images/portfolio/".$don['image']."' alt='image de ".$don['nom']."'>";
                 }
             ?>
-            <h3 class="cat"><a href="gallery.php?cat=Illustrator">Illustration</a></h3>
-        </div>
+            <h3 class="cat">Photography</h3>
+        </a>
 
 
+        <a class="categorie droite" href="gallery.php?cat=Illustrator">
+            <?php
+                $req = $bdd -> prepare("SELECT * FROM galerie WHERE frontPage=1 ORDER BY id DESC");
+                $req->execute();
+                while($don = $req->fetch()){
+                    echo "<img class='travaux' src='images/portfolio/".$don['image']."' alt='image de ".$don['nom']."'>";
+                }
+            ?>
+            <h3 class="cat">Illustrator</h3>
+        </a>
 
-        <div class="categorie gauche">
-            <div class="photo"></div>
-            <div class="photo"></div>
-            <div class="photo"></div>
-            <div class="photo"></div>
-            <div class="photo"></div>
-            <h3 class="cat"><a href="gallery.php?cat=Vidéo">Video</a></h3>
-    
-        </div>
+
+        <a class="categorie gauche" href="gallery.php?cat=Illustrator">
+            <?php
+                $req = $bdd -> prepare("SELECT * FROM galerie WHERE id_categorie=23 ORDER BY id DESC");
+                $req->execute();
+                while($don = $req->fetch()){
+                    echo "<img class='travaux' src='images/portfolio/".$don['image']."' alt='image de ".$don['nom']."'>";
+                }
+            ?>
+            <h3 class="cat">Video</h3>
+        </a>
 
 
     </div>

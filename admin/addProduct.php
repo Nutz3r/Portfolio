@@ -45,7 +45,18 @@
                         $cat->closeCursor();
                     ?>
                 </select>
-            </div>            
+            </div>
+            
+
+
+
+
+            <label class="checkbox">Afficher sur la Front Page?
+                <input type="checkbox" name="ma_checkbox" value="1">
+                <span class="checkmark"></span>
+            </label> <!-- FAIRE LA UPDATE PRODUCT AVEC checked="checked"-->
+            
+                        
             <div class="form-group my-3">
                 <label for="description">Description: </label>
                 <textarea name="description" id="description" class="form-control"></textarea>

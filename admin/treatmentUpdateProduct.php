@@ -26,7 +26,7 @@ if (isset($_POST['nom'])) {
     // vérif du contenu du formulaire et gestion error
     // init d'une variable $err à 0 
     $err = 0;
-    $categorie = $_POST['id_categorie'];
+    $categorie = $_POST['categorie'];
     $nom = $_POST['nom'];
     $description = $_POST['description'];
     if (empty($_POST['nom'])) {
@@ -46,12 +46,12 @@ if (isset($_POST['nom'])) {
 
         if (empty($_FILES['image']['tmp_name'])) {
             // pas d'image, donc modif sans fichier
-            $update = $bdd->prepare("UPDATE galerie SET nom=:titre, description=:description, categorie=:categorie WHERE id=:myid ");
+            $update = $bdd->prepare("UPDATE galerie SET nom=:titre, description=:description, id_categorie=:categorie WHERE id=:myid ");
             $update->execute([
                 ":titre" => $nom,
                 ":description" => $description,
                 ":categorie" => $categorie,
-                ":myid" => $id,
+                ":myid" => $id
             ]);
             $update->closeCursor();
             header("LOCATION:products.php");

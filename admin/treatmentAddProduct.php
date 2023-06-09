@@ -30,6 +30,13 @@ if (isset($_POST['nom'])) {
         $categorie = htmlspecialchars($_POST['categorie']);
     }
 
+    if(empty($_POST['ma_checkbox']))
+    {
+        $visibilty= 0;
+    }else{
+        $visibilty=1;
+    }
+
     //vérif si err sinon traitement
     if ($err == 0) {
         $dossier = "../images/portfolio/"; // ../images/monfichier.jpg
@@ -59,8 +66,8 @@ if (isset($_POST['nom'])) {
 
             if (move_uploaded_file($_FILES['image']['tmp_name'], $dossier . $fichiercptl)) {
                 require "../connexion.php";
-                $insert = $bdd->prepare("INSERT INTO galerie(nom,description,image,id_categorie) VALUES(?,?,?,?)");
-                $insert->execute([$nom, $description, $fichiercptl,$categorie]);
+                $insert = $bdd->prepare("INSERT INTO galerie(nom,description,image,id_categorie, frontPage) VALUES(?,?,?,?,?)");
+                $insert->execute([$nom, $description, $fichiercptl,$categorie,$visibilty]);
                 $insert->closeCursor();
                 
                 
