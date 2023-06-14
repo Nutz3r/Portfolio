@@ -17,7 +17,14 @@ function changeImage() {
 
 /*********** BURGER MENU ***********/
 
+var burger = document.querySelector('.burger-container')
+var burgerNav = document.querySelector('.burgerNav')
 
+  burger.addEventListener('click',()=>{
+    burgerNav.classList.toggle('on')
+    burger.classList.toggle('burgerOn')
+
+  })
 
 /*********** MY WORK ***********/
     

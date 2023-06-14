@@ -345,7 +345,6 @@ nav h1{
     width: 80%;
     height: 100vh;
     margin: 0 auto;
-
     justify-content: center;
 }
 
@@ -608,14 +607,91 @@ input[type=text], textarea, input[type=email] {
 /***** 1024px *****/
 
 @media all and (max-width: 1024px){
-    nav{
+    .normalNav{
         display: none;
     }
 
+
     /***** BURGER MENU *****/
+
+    .burger-container {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        position: fixed;
+        z-index: 1001;
+        transition: all 1s;
+        left: 5%;
+        top: 10px;
+      }
+    
+    .burger-container.option-2 span {
+        background-color: white;
+        transition: width 0.5s, background-color 0.5s;
+    }
+    
+    .burger-container.option-2 span:first-child {
+        width: 50%;
+        margin-left: auto;
+    }
+    
+    .burger-container.option-2 span:last-child {
+        width: 50%;
+    }
+    
+    .burger-container.option-2:hover span {
+        background-color: white;
+    }
+    
+      .burger-container.option-2:hover span:first-child {
+        width: 100%;
+    }
+    
+    .burger-container.option-2:hover span:last-child {
+        width: 100%;
+    }
+      
+    .burger-container span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        margin-top: 12px;
+    }
+
+    .burgerNav{
+        height: 100vh;
+        width: 100%;
+        background-color: #131313;
+        transition: all 1s;
+        left: -100%;
+        position: fixed;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .on{
+        left: 0!important;
+        position: fixed;
+    }
+
+    .burgerOn{
+        left: 90%;
+    }
+
+    .burgerNav a{
+        color: white;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2vh;
+    }
+
 }
-
-
 
 /***** 768px *****/
 @media all and (max-width: 768px){

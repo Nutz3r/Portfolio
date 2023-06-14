@@ -62,7 +62,18 @@
 
     </nav>
 
-
+    <div class='burger-container option-2'>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <nav class="burgerNav">
+                <a href="#profil">Profil</a>
+                <a href="#skills">Skills</a>
+                <a href="#myWork">My Work</a>
+                <a href="#contact">Contact</a>
+        </nav>
 
 <!-- ******************************************************** -->
     <div id="accueil">
