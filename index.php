@@ -69,19 +69,29 @@
         
         <div class="discover">
 
-            <h1 id="hello">Looking for...</h1>
+            <h1 id="looking">Looking for</h1>
+            <div class="jobs">
+                <h1 class="nametag">a Photographer</h1>
+                <h1 class="nametag">a Web Developper</h1>
+                <h1 class="nametag">an Illustrator</h1>
+                <h1 class="nametag">a Web Designer</h1>
+                <h1 class="nametag">a Film Maker</h1>
+                <h1 class="nametag">a Sound Designer</h1>
+                <h1 class="nametag">a 3D artist</h1>
+                <h1 class="nametag">something else?</h1>
+            </div>    
 
             <div class="choice">
                 <a class="bouton-accueil" href="#contact">Contact me</a>
-                <a class="bouton-accueil" href="#profil">Who am I?</a>
+                <a class="bouton-accueil whoami" href="#profil">Who am I?</a>
             </div> 
             
         </div>
 
 
-
-    <div class="section">
-        <div class="image-container">
+        
+        <div class="section">
+            <div class="image-container">
             <div class="moi" style="background-image: url(images/scroll/1.png);"></div>
         </div>
     </div>

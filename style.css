@@ -9,48 +9,6 @@ html{
     scroll-behavior:smooth
 }
 
-/***** SCROLL *****/
-
-#scroll{
-    width: 60px;
-    height: 45px;
-    background-color: white;
-    color: black;
-    line-height: 45px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    text-align: center;
-}
-
-#cible{
-    width: 160px;
-    height: 45px;
-    line-height: 45px;
-    text-align: center;
-    background-color: white;
-    color: black;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 100;
-}
-
-#quelleslide{
-    width: 100px;
-    height: 45px;
-    line-height: 45px;
-    text-align: center;
-    background-color: white;
-    color: black;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
-}
-
 /***** MENU *****/
 header{
     display: none;
@@ -160,6 +118,10 @@ nav h1{
     font-weight: 100;
 }
 
+#looking{
+    font-size: 50px!important;
+}
+
 .bouton-accueil{
     width: 150px;
     border-radius: 30px;
@@ -179,9 +141,21 @@ nav h1{
     border: 1px solid white;
 }
 
+.whoami{
+    background-color: black!important;
+    border: 1px solid white!important;
+    color: white!important;
+}
+
+.whoami:hover{
+    color: black!important;
+    background-color: white!important;
+}
+
+
 .choice{
     display: flex;
-    gap: 10%;
+    gap: 5%;
     margin-top: 20px;
 }
 
@@ -228,12 +202,119 @@ nav h1{
     opacity: 1;
 }
 
-.metier{
+ .jobs{
+    height: 60px;
+    width: 900px;
+    line-height: 60px;
+ }
+ .nametag{
+    position: absolute;
+    width: fit-content;
+  }
+  
+  .nametag:nth-of-type(1){
+    animation-name: fade;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+    animation-duration: 2s;
+    animation-direction: normal;
+    color: yellow;
+  }
+  
+  .nametag:nth-of-type(2){
+    animation-name: fade;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-direction: normal;
+    color: cyan;
+  }
+  
+  .nametag:nth-of-type(3){
+    animation-name: fade;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 4s;
+    animation-duration: 2s;
+    animation-direction: normal;
+    color: crimson;
+  }
+
+  .nametag:nth-of-type(4){
+    animation-name: fade;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 6s;
+    animation-duration: 2s;
+    animation-direction: normal;
+    color: mediumspringgreen;
+  }
+
+  .nametag:nth-of-type(5){
+    animation-name: fade;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 8s;
+    animation-duration: 2s;
+    animation-direction: normal;
+    color: purple;
+  }
+
+  .nametag:nth-of-type(6){
+    animation-name: fade;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 10s;
+    animation-duration: 2s;
+    animation-direction: normal;
+    color: blue;
+  }
+
+  .nametag:nth-of-type(7){
+    animation-name: fade;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 12s;
+    animation-duration: 2s;
+    animation-direction: normal;
+    color: orange;
+  }
+
+  .nametag:nth-of-type(8){
+    animation-name: gotu;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-delay: 14s;
+    animation-duration: 2s;
+    animation-direction: normal;
     color: white;
-    font-size: 12px;
-    font-family: 'Aboreto', cursive;
-    font-weight: 800;
-}
+  }
+
+
+  
+  @keyframes fade{
+      0% {
+        opacity: 0;
+      }
+      60% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes gotu{
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+  
 
 
 /***** PROFIL *****/
