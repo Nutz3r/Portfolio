@@ -30,6 +30,10 @@ nav{
     z-index: 1000;
 }
 
+.burgerNav{
+    display: none;
+}
+
 .btn_name{
     position: relative;
 }
