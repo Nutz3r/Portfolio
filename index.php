@@ -15,7 +15,7 @@
 
 
 <!-- ******************************************************** -->
-    <nav>
+    <nav class="normalNav">
         <a class="btn_name" href="#profil">
                 <div id="button">
                     <div class="button-hover">
@@ -46,7 +46,7 @@
             <h1 id="titre1">My•Work</h1>  
         </a>
 
-        <a class="btn_name" href="#contact">
+        <a class="btn_name" href="#tempcontact">
                 <div id="button">
                     <div class="button-hover">
                         <div class="button-triangle"></div>
@@ -67,13 +67,13 @@
             <span></span>
             <span></span>
         </div>
-        
-        <nav class="burgerNav">
-                <a href="#profil">Profil</a>
-                <a href="#skills">Skills</a>
-                <a href="#myWork">My Work</a>
-                <a href="#contact">Contact</a>
-        </nav>
+       
+            <nav class="burgerNav">
+                <a class="liens" href="#profil">Profil</a>
+                <a class="liens" href="#skills">Skills</a>
+                <a class="liens" href="#myWork">My Work</a>
+                <a class="liens" href="#contact">Contact</a>
+            </nav>
 
 <!-- ******************************************************** -->
     <div id="accueil">
@@ -234,7 +234,7 @@
     </div>
 
 <!-- ******************************************************** -->
-<div class="tempo">
+<div id="tempcontact" class="tempo">
 <h2>Contact Me</h2>
 
 </div>

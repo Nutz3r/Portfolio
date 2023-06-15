@@ -17,14 +17,25 @@ function changeImage() {
 
 /*********** BURGER MENU ***********/
 
-var burger = document.querySelector('.burger-container')
-var burgerNav = document.querySelector('.burgerNav')
+document.addEventListener('DOMContentLoaded', function() {
+  var burger = document.querySelector('.burger-container');
+  var burgerNav = document.querySelector('.burgerNav');
+  var liens = document.querySelectorAll('.liens');
 
-  burger.addEventListener('click',()=>{
-    burgerNav.classList.toggle('on')
-    burger.classList.toggle('burgerOn')
+  burger.addEventListener('click', function() {
+      burgerNav.classList.toggle('on');
+      burger.classList.toggle('burgerOn');
+  });
 
-  })
+  liens.forEach(function(lien) {
+      lien.addEventListener('click', function() {
+          burgerNav.classList.toggle('on');
+          burger.classList.toggle('burgerOn');
+      });
+  });
+});
+
+
 
 /*********** MY WORK ***********/
     
