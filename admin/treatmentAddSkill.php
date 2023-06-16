@@ -63,16 +63,16 @@
                 
 
                 }else{
-                    header("LOCATION:addskill.php?errorimg=3");
+                    header("LOCATION:addSkill.php?errorimg=3");
 
                 }             
             }else{
-                header("LOCATION:addskill.php?errorimg=".$erreur);
+                header("LOCATION:addSkill.php?errorimg=".$erreur);
               
             }
 
         }else{
-            header("LOCATION:addskill.php?error=".$err);
+            header("LOCATION:addSkill.php?error=".$err);
         }
 
     }else{

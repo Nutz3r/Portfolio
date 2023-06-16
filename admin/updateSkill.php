@@ -44,7 +44,7 @@
             <a href="skills.php" class="btn btn-secondary">Retour</a>
         </div>
         <h2>Modifier <?= $don['nom'] ?></h2>
-        <form action="treatmentUpdateskill.php?id=<?= $id ?>" method="POST" enctype="multipart/form-data">
+        <form action="treatmentUpdateSkill.php?id=<?= $id ?>" method="POST" enctype="multipart/form-data">
             <div class="form-group my-3">
                 <label for="nom">Nom: </label>
                 <input type="text" id="nom" name="nom" class="form-control" value="<?= $don['nom'] ?>">

@@ -27,7 +27,7 @@
             <a href="skills.php" class="btn btn-secondary">Retour</a>
         </div>
         <h2>Ajouter un skills</h2>
-        <form action="treatmentAddskill.php" method="POST" enctype="multipart/form-data">
+        <form action="treatmentAddSkill.php" method="POST" enctype="multipart/form-data">
             <div class="form-group my-3">
                 <label for="nom">Nom: </label>
                 <input type="text" id="nom" name="nom" class="form-control">

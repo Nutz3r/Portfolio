@@ -51,7 +51,7 @@
             <a href="dashboard.php" class="btn btn-secondary">Retour</a>
         </div>
         <div class="pt-5 text-center ">
-        <a href="addskill.php" class="btn btn-primary ">Ajouter</a>
+        <a href="addSkill.php" class="btn btn-primary ">Ajouter</a>
          </div>
         <?php 
             if(isset($_GET['delsuccess']))

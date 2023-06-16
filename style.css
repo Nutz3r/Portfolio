@@ -411,7 +411,7 @@ nav h1{
 /***** SKILLS *****/
 
 #competences{
-    min-height: 30vh;
+    min-height: 50vh;
     background-color: black;
     display: grid;
     position: relative;

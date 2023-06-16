@@ -92,11 +92,11 @@
         
 
                     }else{
-                        header("LOCATION:updateskill.php?id=".$id."&errorimg=3");
+                        header("LOCATION:updateSkill.php?id=".$id."&errorimg=3");
 
                     }             
                 }else{
-                    header("LOCATION:updateskill.php?id=".$id."&errorimg=".$erreur);
+                    header("LOCATION:updateSkill.php?id=".$id."&errorimg=".$erreur);
                 }
 
 
@@ -106,7 +106,7 @@
 
 
         }else{
-            header("LOCATION:updateskill.php?id=".$id."&error=".$err);
+            header("LOCATION:updateSkill.php?id=".$id."&error=".$err);
         }
 
     }else{
