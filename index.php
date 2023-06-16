@@ -7,6 +7,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate"/>
+
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js" ></script>
     <title>Antoine Lespagnard - Portfolio</title>
@@ -16,7 +18,7 @@
 
 <!-- ******************************************************** -->
     <nav class="normalNav">
-        <a class="btn_name" href="#profil">
+        <a class="btn_name" href="#whoami">
                 <div id="button">
                     <div class="button-hover">
                         <div class="button-triangle"></div>
@@ -142,13 +144,15 @@
 </div>   
 
 <!-- ******************************************************** -->
-<div class="tempo"></div>
+<div class="tempo" id="whoami">
+    <h2>Who Am I?</h2>
+</div>
 
     <div id="profil">
         <div class="left-content">
             <div class="contenu"></div>
             <div class="infos texte">
-                <h1>Lorem Ipsum</h1>
+                <h1 class="presentation">Lorem Ipsum</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, repudiandae commodi obcaecati quas veritatis cum. Commodi nam aliquam neque itaque obcaecati magnam nesciunt distinctio reiciendis corporis, voluptatum cumque, ipsam ipsa earum molestiae repellat enim perferendis delectus atque numquam laudantium nisi asperiores voluptatibus iste!</p>
             </div>
         </div>
@@ -196,9 +200,9 @@
     <div class="montravail">
 
 
-        <a class="categorie gauche" href="gallery.php?cat=Illustrator">
+        <a class="categorie gauche" href="gallery.php?cat=Photographie">
             <?php
-                $req = $bdd -> prepare("SELECT * FROM galerie WHERE id_categorie=23 ORDER BY id DESC");
+                $req = $bdd -> prepare("SELECT * FROM galerie WHERE frontPage=1 AND id_categorie=28 ORDER BY id DESC LIMIT 4");
                 $req->execute();
                 while($don = $req->fetch()){
                     echo "<img class='travaux' src='images/portfolio/".$don['image']."' alt='image de ".$don['nom']."'>";
@@ -208,27 +212,72 @@
         </a>
 
 
-        <a class="categorie droite" href="gallery.php?cat=Illustrator">
+        <a class="categorie droite" href="gallery.php?cat=Illustrator"> <!-- Afficher plusieurs categories sur une page? ici : Illustrator et Photoshop -->
             <?php
-                $req = $bdd -> prepare("SELECT * FROM galerie WHERE frontPage=1 ORDER BY id DESC");
+                $req = $bdd -> prepare("SELECT * FROM galerie WHERE frontPage=1 AND (id_categorie=23 OR id_categorie=24) ORDER BY id DESC LIMIT 4");
                 $req->execute();
                 while($don = $req->fetch()){
                     echo "<img class='travaux' src='images/portfolio/".$don['image']."' alt='image de ".$don['nom']."'>";
                 }
             ?>
-            <h3 class="cat">Illustrator</h3>
+            <h3 class="cat">Illustration</h3>
         </a>
 
 
-        <a class="categorie gauche" href="gallery.php?cat=Illustrator">
+        <a class="categorie gauche" href="gallery.php?cat=PremierPro">
             <?php
-                $req = $bdd -> prepare("SELECT * FROM galerie WHERE id_categorie=23 ORDER BY id DESC");
+                $req = $bdd -> prepare("SELECT * FROM galerie WHERE frontPage=1 AND id_categorie=26 ORDER BY id DESC LIMIT 4");
                 $req->execute();
                 while($don = $req->fetch()){
                     echo "<img class='travaux' src='images/portfolio/".$don['image']."' alt='image de ".$don['nom']."'>";
                 }
             ?>
             <h3 class="cat">Video</h3>
+        </a>
+
+        <a class="categorie droite" href="gallery.php?cat=Web">
+            <?php
+                $req = $bdd -> prepare("SELECT * FROM galerie WHERE frontPage=1 AND (id_categorie=25 OR id_categorie=30) ORDER BY id DESC LIMIT 4");
+                $req->execute();
+                while($don = $req->fetch()){
+                    echo "<img class='travaux' src='images/portfolio/".$don['image']."' alt='image de ".$don['nom']."'>";
+                }
+            ?>
+            <h3 class="cat">Web (UI/UX)</h3>
+        </a>
+
+
+        <a class="categorie gauche" href="gallery.php?cat=InDesign">
+            <?php
+                $req = $bdd -> prepare("SELECT * FROM galerie WHERE frontPage=1 AND id_categorie=27 ORDER BY id DESC LIMIT 4");
+                $req->execute();
+                while($don = $req->fetch()){
+                    echo "<img class='travaux' src='images/portfolio/".$don['image']."' alt='image de ".$don['nom']."'>";
+                }
+            ?>
+            <h3 class="cat">Layout</h3>
+        </a>
+
+        <a class="categorie droite" href="gallery.php?cat=Blender">
+            <?php
+                $req = $bdd -> prepare("SELECT * FROM galerie WHERE frontPage=1 AND id_categorie=29 ORDER BY id DESC LIMIT 4");
+                $req->execute();
+                while($don = $req->fetch()){
+                    echo "<img class='travaux' src='images/portfolio/".$don['image']."' alt='image de ".$don['nom']."'>";
+                }
+            ?>
+            <h3 class="cat">3D</h3>
+        </a>
+
+            <a class="categorie gauche" href="gallery.php?cat=Autres">
+            <?php
+                $req = $bdd -> prepare("SELECT * FROM galerie WHERE frontPage=1 AND id_categorie=31 ORDER BY id DESC LIMIT 4");
+                $req->execute();
+                while($don = $req->fetch()){
+                    echo "<img class='travaux' src='images/portfolio/".$don['image']."' alt='image de ".$don['nom']."'>";
+                }
+            ?>
+            <h3 class="cat">Others</h3>
         </a>
 
 

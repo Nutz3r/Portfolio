@@ -155,7 +155,11 @@
 
 
 
+/***** td *****/
 
+td{
+    text-align: center
+}
 
 /***** TRAVAUX *****/
 

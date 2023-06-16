@@ -344,6 +344,14 @@ nav h1{
     color: white;
 }
 
+.presentation{
+    font-family: 'Aboreto', cursive;
+    color: white;
+    font-size: 38px;
+    font-weight: 100;
+    margin: 40px 0 40px 0;
+}
+
 .left-content{
     display: flex;
     width: 80%;
@@ -362,7 +370,7 @@ nav h1{
 }
 
 .contenu{
-    position: sticky;
+  /*  position: sticky; */
     height: 428px;
     width: 330px;
     top: 20%;
@@ -379,7 +387,7 @@ nav h1{
 .texte{
     width: 50%;
     position: relative;
-    top: 20%;
+    /* top: 20%; */
     margin-left: 30px;
     text-align: justify;
     font-size: 20px;
@@ -592,6 +600,18 @@ input[type=text], textarea, input[type=email] {
     width: 100%;
   }
 
+
+/***** GALERY.PHP *****/
+
+.goBack{
+    display: block;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
+
+
+  /*********** MEDIA QUERIES***********/
 
 
   /***** iPad Pro *****/

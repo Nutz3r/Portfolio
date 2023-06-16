@@ -32,6 +32,7 @@
     <div id="galerie">
 
     <div class="tempo">
+        <a class="goBack" href="index.php.#myWork">Back</a>
         <h2>Gallery</h2>
     </div>
 

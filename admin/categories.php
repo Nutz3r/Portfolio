@@ -39,6 +39,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="adminstyle.css">
     <title>Administration des categories</title>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
@@ -112,6 +113,7 @@
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th class='text-center'>ID</th>
                     <th class='text-center'>Nom</th>
                     <th class='text-center'>Action</th>
                 </tr>
@@ -124,6 +126,7 @@
                     $req->execute();                    while($don = $req->fetch())
                     {
                         echo "<tr>";
+                            echo "<td>".$don['id']."</td>";
                             echo "<td class='text-center'>".$don['nom']."</td>";
                             echo "<td class='text-center'>";
                             if($don['id']!=0)

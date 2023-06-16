@@ -1,21 +1,21 @@
-/*********** ACCUEIL ***********/
+/**** SCROLL IMAGE ****/
 
-window.onscroll = function() { changeImage() }
+window.onscroll = function() {
+  var scrollY = window.scrollY || document.documentElement.scrollTop;
+  var windowHeight = window.innerHeight;
 
-function changeImage() {
-  var scroll = window.scrollY + (window.innerHeight/1);
+  var gaucheElements = document.querySelectorAll('.gauche');
+  var droiteElements = document.querySelectorAll('.droite');
 
   [...document.getElementsByClassName('section')].forEach(el => {
     el.classList.remove('active');
 
-    if(el.offsetTop <= scroll && el.offsetTop + el.offsetHeight > scroll) {
+    if (el.offsetTop <= scrollY + (windowHeight / 1) && el.offsetTop + el.offsetHeight > scrollY + (windowHeight / 1)) {
       el.classList.add('active');
     }
-  })
-} changeImage();
+  });
 
-
-/*********** BURGER MENU ***********/
+/**** BURGER ****/
 
 document.addEventListener('DOMContentLoaded', function() {
   var burger = document.querySelector('.burger-container');
@@ -23,23 +23,41 @@ document.addEventListener('DOMContentLoaded', function() {
   var liens = document.querySelectorAll('.liens');
 
   burger.addEventListener('click', function() {
-      burgerNav.classList.toggle('on');
-      burger.classList.toggle('burgerOn');
+    burgerNav.classList.toggle('on');
+    burger.classList.toggle('burgerOn');
   });
 
   liens.forEach(function(lien) {
-      lien.addEventListener('click', function() {
-          burgerNav.classList.toggle('on');
-          burger.classList.toggle('burgerOn');
-      });
+    lien.addEventListener('click', function() {
+      burgerNav.classList.toggle('on');
+      burger.classList.toggle('burgerOn');
+    });
   });
 });
 
+/**** CATEGORIES ****/
 
+  gaucheElements.forEach(function(element) {
+    var rect = element.getBoundingClientRect();
+    var elementTop = rect.top;
+    var elementBottom = rect.bottom;
 
-/*********** MY WORK ***********/
-    
-      /* myWork est à 7644px */
+    if (elementTop < windowHeight && elementBottom > 0) {
+      element.style.left = '0';
+    } else {
+      element.style.left = '-100%';
+    }
+  });
 
-/***********  ***********/
+  droiteElements.forEach(function(element) {
+    var rect = element.getBoundingClientRect();
+    var elementTop = rect.top;
+    var elementBottom = rect.bottom;
 
+    if (elementTop < windowHeight && elementBottom > 0) {
+      element.style.left = '0';
+    } else {
+      element.style.left = '100%';
+    }
+  });
+};
