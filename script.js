@@ -63,6 +63,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
-
-
-/**** LIGHTBOX ****/

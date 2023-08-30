@@ -35,7 +35,7 @@
                         <div class="button-body"></div>
                     </div>
                 </div>
-            <h1 id="titre1">Skills</h1>            
+            <h1 id="titre1">Skills</h1>
         </a>
 
         <a class="btn_name" href="#myWork">
