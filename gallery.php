@@ -26,6 +26,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Gallery - Antoine Lespagnard</title>
 </head>
 <body class="galleryBody">
@@ -51,7 +52,7 @@
         $req->execute([$donCat['id']]);
         while($don = $req->fetch())
         {
-            echo "<img class='format' src='images/portfolio/".$don['gimage']."' alt='image de ".$don['gnom']."'>";
+            echo "<img class='format' src='images/portfolio/".$don['gimage']."' alt='image de ".$don['gnom']."' data-image='images/portfolio/".$don['gimage']."'>";
         }
         $req->closeCursor();
     ?>
@@ -63,6 +64,26 @@
     
 </div>
 
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-image" class="lightbox-content" src="" alt="Lightbox Image">
+</div>
+
 
 </body>
+
+<script>
+    $(document).ready(function() {
+        $(".format").click(function() {
+            var imagePath = $(this).attr("src");
+            $("#lightbox-image").attr("src", imagePath);
+            $("#lightbox").fadeIn();
+        });
+
+        $(".close").click(function() {
+            $("#lightbox").fadeOut();
+        });
+    });
+</script>
+
 </html>
