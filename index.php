@@ -291,7 +291,6 @@
 
     <div id="contact">
         <div class="containercontact">
-            <h1 class="contact">Formulaire de contact</h1>
                 <form action="traitement.php" method="POST">
                     <?php
                         if(isset($_GET['add']))
@@ -299,7 +298,7 @@
                             echo "<div class='success'>Votre message a bien été envoyé</div>";
                         }
                     ?>
-                <input type="" placeholder="your Name" id="nom" name="nom" required>
+                <input type="" placeholder="Your name" id="nom" name="nom" required>
                 <input type="email" name="email" id="email" placeholder="E-mail" required>
                 <textarea id="message" cols="30" rows="10" placeholder="Your Message" name="message" required></textarea>
                 <input type="submit" value="submit" class="btnwsh">
@@ -315,6 +314,51 @@
 
 <!-- ******************************************************** -->
 
+<footer>
+
+
+<div id="footer1">
+    <div class="menufooter" id="menufooter1">  
+        <h3>Menu</h3>
+        <ul>
+            <li><a href="index.php#whoami">Who Am I?</a></li>
+            <li><a href="index.php#seemywork">My Work</a></li>
+            <li><a href="index.php#myskills">Skills</a></li>
+            <li><a href="index.php#contact">Contact Me</a></li>
+        </ul>
+    </div>
+    <div class="menufooter" id="menufooter2">  
+        <h3>Categories</h3>
+        <ul>
+            <li><a href="gallery.php?cat=Photographie">Photography</a></li>
+            <li><a href="gallery.php?cat=Illustrator">Illustration</a></li>
+            <li><a href="gallery.php?cat=PremierPro">Video</a></li>
+            <li><a href="gallery.php?cat=Web">Web</a></li>
+            <li><a href="gallery.php?cat=InDesign">Layout</a></li>
+            <li><a href="gallery.php?cat=Blender">3D</a></li>
+            <li><a href="gallery.php?cat=Autres">Others</a></li>
+        </ul>
+    </div>
+    <div class="menufooter" id="menufooter3">  
+        <h3>Contact</h3>
+        <ul>
+            <li>antoinelespagnard@gmail.com</li>
+            <li><a href="https://www.instagram.com/nutzer_photography/" target="blank">Instagram: nutzer_photography</a></li>
+            <li><a href="legal.php">Legal mentions</a ></li>
+        </ul>
+    </div>
+</div>
+
+
+<div id="footer2">
+    <div>
+        &copy;Antoine Lespagnard 2023
+    </div>
+</div>
+
+
+
+</footer> 
 
     
 </body>

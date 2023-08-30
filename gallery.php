@@ -28,12 +28,19 @@
     <link rel="stylesheet" href="style.css">
     <title>Gallery - Antoine Lespagnard</title>
 </head>
-<body>
+<body class="galleryBody">
+
+    <div class="back">
+        <a class="goBack" href="index.php.#myWork"> < Back to site</a>
+    </div> 
+
     <div id="galerie">
 
     <div class="tempo">
-        <a class="goBack" href="index.php.#myWork">Back</a>
-        <h2>Gallery</h2>
+       
+    
+
+    <h2>Gallery</h2>
     </div>
 
 

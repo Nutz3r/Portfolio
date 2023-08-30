@@ -15,25 +15,6 @@ window.onscroll = function() {
     }
   });
 
-/**** BURGER ****/
-
-document.addEventListener('DOMContentLoaded', function() {
-  var burger = document.querySelector('.burger-container');
-  var burgerNav = document.querySelector('.burgerNav');
-  var liens = document.querySelectorAll('.liens');
-
-  burger.addEventListener('click', function() {
-    burgerNav.classList.toggle('on');
-    burger.classList.toggle('burgerOn');
-  });
-
-  liens.forEach(function(lien) {
-    lien.addEventListener('click', function() {
-      burgerNav.classList.toggle('on');
-      burger.classList.toggle('burgerOn');
-    });
-  });
-});
 
 /**** CATEGORIES ****/
 
@@ -61,3 +42,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 };
+
+
+/**** BURGER ****/
+
+document.addEventListener('DOMContentLoaded', function() {
+  var burger = document.querySelector('.burger-container');
+  var burgerNav = document.querySelector('.burgerNav');
+  var liens = document.querySelectorAll('.liens');
+
+  burger.addEventListener('click', function() {
+    burgerNav.classList.toggle('on');
+    burger.classList.toggle('burgerOn');
+  });
+
+  liens.forEach(function(lien) {
+    lien.addEventListener('click', function() {
+      burgerNav.classList.toggle('on');
+      burger.classList.toggle('burgerOn');
+    });
+  });
+});
