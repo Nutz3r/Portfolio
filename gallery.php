@@ -32,7 +32,7 @@
 <body class="galleryBody">
 
     <div class="back">
-        <a class="goBack" href="index.php.#myWork"> < Back to site</a>
+        <a class="goBack" href="index.php#myWork"> < Back to site</a>
     </div> 
 
     <div id="galerie">
