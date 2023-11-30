@@ -1212,7 +1212,7 @@ input[type=submit]:hover{
 
     .section{
         justify-content: center;
-        min-height: 65vh;
+        min-height: 100vh;
     }
 
     .gif{
