@@ -7,13 +7,6 @@ window.onscroll = function() {
   var gaucheElements = document.querySelectorAll('.gauche');
   var droiteElements = document.querySelectorAll('.droite');
 
-  [...document.getElementsByClassName('section')].forEach(el => {
-    el.classList.remove('active');
-
-    if (el.offsetTop <= scrollY + (windowHeight / 1) && el.offsetTop + el.offsetHeight > scrollY + (windowHeight / 1)) {
-      el.classList.add('active');
-    }
-  });
 
 
 /**** CATEGORIES ****/

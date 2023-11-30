@@ -102,43 +102,10 @@
         </div>
 
 
-        
         <div class="section">
-            <div class="image-container">
-            <div class="moi" style="background-image: url(images/scroll/1.png);"></div>
+            <div class="parfait"></div>
+            <div class="gif"></div>
         </div>
-    </div>
-    
-    
-    <div class="section">
-        <div class="image-container">
-            <div class="moi" style="background-image: url(images/scroll/2.png);"></div>
-        </div>
-    </div>
-    
-    <div class="section">
-        <div class="image-container">
-            <div class="moi" style="background-image: url(images/scroll/3.png);"></div>
-        </div>
-    </div>
-    
-    <div class="section">
-        <div class="image-container">
-            <div class="moi" style="background-image: url(images/scroll/4.png);"></div>
-        </div>
-    </div>
-    
-    <div class="section">
-        <div class="image-container">
-            <div class="moi" style="background-image: url(images/scroll/5.png);"></div>
-        </div>
-    </div>
-    
-    <div class="section last">
-        <div class="image-container">
-            <div class="moi" style="background-image: url(images/scroll/6.png);"></div>
-        </div>
-    </div>
     
     
 </div>   
