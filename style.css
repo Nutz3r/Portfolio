@@ -1190,6 +1190,11 @@ input[type=submit]:hover{
 
 
 @media all and (max-width: 375px){
+    
+    #accueil{
+        height: 100vh;
+    }
+    
     .moi{
         right: 0;
         top: 0;
@@ -1199,6 +1204,19 @@ input[type=submit]:hover{
     
     .discover{
         top: 65%;
+    }
+
+    .parfait{
+        display: none;
+    }
+
+    .section{
+        justify-content: center;
+        min-height: 65vh;
+    }
+
+    .gif{
+        width: 100%;
     }
 
     .jobs{

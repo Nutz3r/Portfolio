@@ -87,7 +87,8 @@
                 <h1 class="nametag">a Photographer</h1>
                 <h1 class="nametag">a Web Developper</h1>
                 <h1 class="nametag">an Illustrator</h1>
-                <h1 class="nametag">a Web Designer</h1>
+                <h1 class="nametag">a PC Builder</h1>
+                <!-- <h1 class="nametag">a Web Designer</h1> -->
                 <h1 class="nametag">a Film Maker</h1>
                 <h1 class="nametag">a Sound Designer</h1>
                 <h1 class="nametag">a 3D artist</h1>
