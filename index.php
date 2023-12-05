@@ -81,7 +81,6 @@
     <div id="accueil">
         
         <div class="discover">
-
             <h1 id="looking">Looking for</h1>
             <div class="jobs">
                 <h1 class="nametag">a Photographer</h1>
@@ -99,7 +98,6 @@
                 <a class="bouton-accueil" href="#contact">Contact me</a>
                 <a class="bouton-accueil whoami" href="#profil">Who am I?</a>
             </div> 
-            
         </div>
 
 
@@ -107,37 +105,26 @@
             <div class="parfait"></div>
             <div class="gif"></div>
         </div>
-    
-    
 </div>   
 
 <!-- ******************************************************** -->
 <div class="tempo" id="whoami">
     <h2>Who Am I?</h2>
 </div>
-
     <div id="profil">
         <div class="left-content">
             <div class="contenu"></div>
             <div class="infos texte">
                 <h1 class="presentation">Lorem Ipsum</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, repudiandae commodi obcaecati quas veritatis cum. Commodi nam aliquam neque itaque obcaecati magnam nesciunt distinctio reiciendis corporis, voluptatum cumque, ipsam ipsa earum molestiae repellat enim perferendis delectus atque numquam laudantium nisi asperiores voluptatibus iste!</p>
+                <div class="DLCV">
+                    <a class="bouton-accueil cv" href="./images/cv/CV_Antoine_Lespagnard.jpg"
+                    download="CV_Antoine_Lespagnard.jpg">Download my CV</a>
+                    <p class="details">6,42MB - JPG File</p>
+                </div>
             </div>
         </div>
-<!--
-        <div class="right-content">
-            <div class="contenu"></div>
-            <div class="infos texte-droite">
-                <h1>Lorem Ipsum</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, repudiandae commodi obcaecati quas veritatis cum. Commodi nam aliquam neque itaque obcaecati magnam nesciunt distinctio reiciendis corporis, voluptatum cumque, ipsam ipsa earum molestiae repellat enim perferendis delectus atque numquam laudantium nisi asperiores voluptatibus iste! Temporibus, in? </p>
-            </div>
-        </div>
--->
     </div>
-
-    
-    
-    
 
 <!-- ******************************************************** -->
 <div class="tempo" id="skills">
