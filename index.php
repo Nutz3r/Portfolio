@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js" ></script>
     <title>Antoine Lespagnard - Portfolio</title>
+    <div class="WIP">Website is under developpment</div>
+
 </head>
 <body> 
 

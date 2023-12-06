@@ -10,6 +10,17 @@ html{
 }
 
 
+/***** WIP *****/
+.WIP{
+    display: flex;
+    background-color: grey;
+    height: 30px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
 /***** MENU *****/
 header{
     display: none;
