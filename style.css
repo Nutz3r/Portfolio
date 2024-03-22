@@ -531,6 +531,11 @@ nav h1{
     margin: 40px 0 40px 0;
 }
 
+.presentationTexte{
+    font-size: 19px;
+    line-height: 27px;
+}
+
 .left-content{
     display: flex;
     width: 80%;

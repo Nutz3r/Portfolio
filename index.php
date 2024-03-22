@@ -117,8 +117,8 @@
         <div class="left-content">
             <div class="contenu"></div>
             <div class="infos texte">
-                <h1 class="presentation">Lorem Ipsum</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, repudiandae commodi obcaecati quas veritatis cum. Commodi nam aliquam neque itaque obcaecati magnam nesciunt distinctio reiciendis corporis, voluptatum cumque, ipsam ipsa earum molestiae repellat enim perferendis delectus atque numquam laudantium nisi asperiores voluptatibus iste!</p>
+                <h1 class="presentation">We call me... Antoine</h1>
+                <p class="presentationTexte">Because it's my name. So people call me like that... Whatever.</br></br> I always loved cinema, photography, art in general... But my passion for graphic design started when I was a child. At the time, I had started a Youtube Channel (do not make fun of me!). With that, I had intertest in making thumbnails, animations and video editing. So I learnt Photoshop, PremierePro and even Cinema4D!</br></br> At the moment, I'm in my final year of graphic design studies and I'm looking for an intership. Feel free to download my CV and contact me!</p>
                 <div class="DLCV">
                     <a class="bouton-accueil cv" href="./images/cv/CV_Antoine_Lespagnard.jpg"
                     download="CV_Antoine_Lespagnard.jpg">Download my CV</a>

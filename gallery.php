@@ -72,6 +72,58 @@
 
 </body>
 
+
+<!-- ******************************************************** -->
+
+<footer>
+
+
+<div id="footer1">
+    <div class="menufooter" id="menufooter1">  
+        <h3>Menu</h3>
+        <ul>
+            <li><a href="index.php#whoami">Who Am I?</a></li>
+            <li><a href="index.php#seemywork">My Work</a></li>
+            <li><a href="index.php#myskills">Skills</a></li>
+            <li><a href="index.php#contact">Contact Me</a></li>
+        </ul>
+    </div>
+    <div class="menufooter" id="menufooter2">  
+        <h3>Categories</h3>
+        <ul>
+            <li><a href="gallery.php?cat=Photographie">Photography</a></li>
+            <li><a href="gallery.php?cat=Illustrator">Illustration</a></li>
+            <li><a href="gallery.php?cat=PremierPro">Video</a></li>
+            <li><a href="gallery.php?cat=Web">Web</a></li>
+            <li><a href="gallery.php?cat=InDesign">Layout</a></li>
+            <li><a href="gallery.php?cat=Blender">3D</a></li>
+            <li><a href="gallery.php?cat=Autres">Others</a></li>
+        </ul>
+    </div>
+    <div class="menufooter" id="menufooter3">  
+        <h3>Contact</h3>
+        <ul>
+            <li>antoinelespagnard@gmail.com</li>
+            <li><a href="https://www.instagram.com/nutzer_photography/" target="blank">Instagram: nutzer_photography</a></li>
+            <li><a href="legal.php">Legal mentions</a ></li>
+        </ul>
+    </div>
+</div>
+
+
+<div id="footer2">
+    <div>
+        &copy;Antoine Lespagnard 2023
+    </div>
+</div>
+
+
+
+</footer> 
+
+    
+</body>
+</html>
 <script>
     $(document).ready(function() {
         $(".format").click(function() {
